@@ -4,7 +4,7 @@ categories: Academic
 
 ---
 
-{:.content-narrow .content-block}
+{:.content-link .content-block}
 [this is the coolest thing](https://www.ucf.edu/news/from-playing-music-in-miami-to-studying-neuroscience-at-mit/)
 
 {:.content-narrow .content-block}
