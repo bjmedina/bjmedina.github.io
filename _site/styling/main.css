@@ -27,7 +27,7 @@ a:hover { background-color: #043927; }
 
 .site-nav { float: right; vertical-align: bottom; display: inline-block; line-height: 30px; font-weight: 600; color: #333333; }
 .site-nav a:hover { color: #333333; background-color: transparent; }
-.site-nav .nav-item { margin-left: 17px; }
+.site-nav .nav-item { margin-left: 17px; font-size: 20px; }
 .site-nav .socials { margin-left: 8.5px; }
 
 /** content */

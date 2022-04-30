@@ -11,6 +11,7 @@ $large-font-size:   30px !default;
 $emph-font-weight:  600 !default;
 $title-font-weight: 1000 !default;
 $emph-link-size: 60px !default;
+$nav-font-size: 20px !default;
 
 $unit-spacing:      15px !default;
 $nav-spacing:       17px !default;
@@ -166,6 +167,7 @@ a {
 
   .nav-item {
     margin-left: $nav-spacing;
+    font-size: $nav-font-size;
   }
 
   .socials {
