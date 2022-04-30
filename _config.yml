@@ -1,0 +1,40 @@
+# 'bundle exec jekyll serve' to test
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+
+# Site settings
+title: bryan j. medina
+email: bjmedina@mit.edu
+description: >- # this means to ignore newlines until "baseurl:"
+    bryan j. medina
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bjmedina2.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+socials:
+    twitter: bj_mdn
+    github: bjmedina
+    instagram: bjmedina_
+
+collections:
+    publications:
+        output: true
+        permalink: /:collection/:name
+
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
