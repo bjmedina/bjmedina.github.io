@@ -3,7 +3,7 @@ title: extras
 permalink: /extras/
 categories: Experience
 ---
-{:.content-narrow .content-block}
+{:.content-list-header .content-block}
 **cool stuff with me in it**
 
 {:.content-narrow .content-block}

@@ -37,6 +37,8 @@ a:hover { background-color: #043927; }
 
 .content-narrow { max-width: -webkit-calc(800px - (15px * 2)); max-width: calc(800px - (15px * 2)); margin-right: auto; margin-left: auto; }
 
+.content-list-header { max-width: -webkit-calc(800px - (15px * 2)); max-width: calc(800px - (15px * 2)); margin-right: auto; margin-left: auto; font-size: 20px; }
+
 .content-image { max-width: -webkit-calc(500px - (15px * 2)); max-width: calc(500px - (15px * 2)); margin-right: auto; margin-left: auto; }
 
 .content-link a { color: #728c69; font-weight: 600; text-decoration: none; font-size: 60px; }

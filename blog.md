@@ -4,7 +4,7 @@ permalink: /blog/
 categories: Personal
 ---
 
-{:.content-narrow .content-block}
+{:.content-list-header .content-block}
 **Blog (?)**
 
 {:.content-narrow .content-block}
@@ -16,5 +16,3 @@ categories: Personal
       </p>
     </div>
   {% endfor %}
-
-</div>

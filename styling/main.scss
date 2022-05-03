@@ -8,6 +8,7 @@ $base-font-family:  Helvetica, sans-serif !default;
 $base-font-size:    15px !default;
 $base-font-weight:  400 !default;
 $large-font-size:   30px !default;
+$header-font-size:  20px !default;
 $emph-font-weight:  600 !default;
 $title-font-weight: 1000 !default;
 $emph-link-size: 60px !default;
@@ -104,8 +105,6 @@ a {
   @extend %clearfix;
 }
 
-
-
 /**
  * Clearfix
  */
@@ -114,8 +113,6 @@ a {
   display: table;
   clear: both;
 }
-
-
 
 /**
  * site header
@@ -167,8 +164,6 @@ a {
   }
 }
 
-
-
 /**
  * content
  */
@@ -185,6 +180,14 @@ a {
   max-width:         calc(#{$content-width-narrow} - (#{$unit-spacing} * 2));
   margin-right: auto;
   margin-left: auto;
+}
+
+.content-list-header {
+  max-width: -webkit-calc(#{$content-width-narrow} - (#{$unit-spacing} * 2));
+  max-width:         calc(#{$content-width-narrow} - (#{$unit-spacing} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  font-size: $header-font-size;
 }
 
 .content-image {
@@ -207,7 +210,6 @@ a {
      }
   }
 }
-
 
 .content-mid {
   max-width: -webkit-calc(#{$content-width-mid} - (#{$unit-spacing} * 2));
