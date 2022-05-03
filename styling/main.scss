@@ -46,8 +46,6 @@ $on-laptop:         800px !default;
   font-size: $base-font-size * $ratio;
 }
 
-
-
 /**
  * basic styling
  */
@@ -73,16 +71,12 @@ p {
   margin-bottom: $base-font-size / 2;
 }
 
-
-
 /**
  * images
  */
 img {
   width: 100%;
 }
-
-
 
 /**
  * links
@@ -96,8 +90,6 @@ a {
      background-color: $brand-color-light;
    }
 }
-
-
 
 /**
  * wrapper
@@ -253,6 +245,6 @@ a {
   img {
     box-shadow: 0 0 $unit-spacing #111;
     margin: 5%;
-    max-width: 80%;
+    max-width: 100%;
   }
 }

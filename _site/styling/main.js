@@ -29,18 +29,18 @@ $(document).ready(function(){
     else {
 
       // create HTML markup for lightbox window
-      var lightbox = 
+      var lightbox =
       '<div id="lightbox">' +
         //'<p> click to close </p>' +
         '<div id="content">' +
           '<img src="' + image_href + '" />' +
         '</div>' +
       '</div>';
-    
+
       $('body').append(lightbox);
     }
   });
-  
+
   // click anywhere to exit lightbox
   $('body').on('click', '#lightbox', function() {
     $('#lightbox').hide();
