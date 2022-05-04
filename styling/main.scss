@@ -26,6 +26,7 @@ $grey-color:        #c2c2c2 !default;
 $content-width:     800px !default;
 $content-width-narrow:  800px !default;
 $content-width-narrow-img:  500px !default;
+$content-width-narrow-gif:  62px !default;
 $content-width-mid: ($content-width + $content-width-narrow) / 2 !default;
 $on-palm:           400px !default;
 $on-laptop:         800px !default;
@@ -193,6 +194,13 @@ a {
 .content-image {
   max-width: -webkit-calc(#{$content-width-narrow-img} - (#{$unit-spacing} * 2));
   max-width:         calc(#{$content-width-narrow-img} - (#{$unit-spacing} * 2));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content-gif {
+  max-width: -webkit-calc(#{$content-width-narrow-gif} - (#{$unit-spacing} * 2));
+  max-width:         calc(#{$content-width-narrow-gif} - (#{$unit-spacing} * 2));
   margin-right: auto;
   margin-left: auto;
 }

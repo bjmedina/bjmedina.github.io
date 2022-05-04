@@ -41,6 +41,8 @@ a:hover { background-color: #043927; }
 
 .content-image { max-width: -webkit-calc(500px - (15px * 2)); max-width: calc(500px - (15px * 2)); margin-right: auto; margin-left: auto; }
 
+.content-gif { max-width: -webkit-calc(62px - (15px * 2)); max-width: calc(62px - (15px * 2)); margin-right: auto; margin-left: auto; }
+
 .content-link a { color: #728c69; font-weight: 600; text-decoration: none; font-size: 60px; }
 .content-link a:hover { background-color: #043927; }
 

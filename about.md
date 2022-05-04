@@ -20,3 +20,8 @@ Aside from my research, I also find much joy in giving back to my community. As 
 
 {:.content-narrow .content-block}
 On my off-time I enjoy biking, baking, playing a number of instruments (typically alto saxophone or electric guitar) and making photographs. I also find pleasure spending tons of money on my [record collection](https://www.discogs.com/user/bj_medina/collection?page=1&limit=100&header=1&layout=big).
+
+{:.content-gif .content-block}
+<figure><center>
+  <img width="2" src="/images/BCS.gif" />
+</center></figure>
