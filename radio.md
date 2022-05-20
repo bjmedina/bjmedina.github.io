@@ -1,5 +1,5 @@
 ---
-title: radio
+title: WMBR
 permalink: /radio/
 categories: music
 ---
@@ -8,7 +8,7 @@ categories: music
 **WMBR playlists**
 
 {:.content-narrow .content-block}
-I have a radioshow on [WMBR](https://wmbr.org/). Here are the playlists for each show!
+I have a radioshow on [WMBR](https://wmbr.org/). below are the playlists for my shows, as they air
 
 {:.content-narrow .content-block}
 <div class="content list">
