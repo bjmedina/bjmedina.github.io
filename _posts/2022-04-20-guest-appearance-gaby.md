@@ -17,6 +17,10 @@ today on the show i have a fantastic friend Gaby R. on the show. gaby and i are 
 i think gaby and i immediately bonded over that fact that we're both one of the few (unfortunately) latinx students in the department. in some sense, we wanted to embrace that fact, and came up with a playlist that brings together music from a vast number of cultures, focusing on ones that are close to home for us.
 
 {:.content-narrow .content-block}
+she calls this playlist "the calculus of friendship". it refers to some book we found in the room we were recording this episode in (but also our nerdy friendship)
+
+
+{:.content-narrow .content-block}
 enjoy!
 
 
