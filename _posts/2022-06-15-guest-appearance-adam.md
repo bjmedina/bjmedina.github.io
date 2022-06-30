@@ -7,7 +7,7 @@ categories: music
 
 
 {:.content-narrow .content-block}
-adam and i met in what i consider to be beautiful circumstances. *NOT DONE*
+adam and i met in what i consider to be beautiful circumstances. a mutual friend noticed our love for music, and had us meet. and the rest is history. in this playlist, adam explores the feeling of reminiscing on beautiful summer days with your friends. i think this playlist captures that feeling perfectly.
 
 {:.content-narrow .content-block}
 enjoy!
