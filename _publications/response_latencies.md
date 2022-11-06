@@ -1,6 +1,6 @@
 ---
 title: Response latencies across six visual areas in the mouse
-authors: Bryan J. Medina, Tolani Olanrire, Josh Siegle, Robert E. Kass
+authors: Bryan J. Medina, Motolani Olanrire, Joshua H. Siegle, Robert E. Kass
 presentation: 1
 date: 2019-08-02
 ref-1-name: PDF
