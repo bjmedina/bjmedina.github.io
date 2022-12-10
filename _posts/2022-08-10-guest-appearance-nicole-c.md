@@ -10,7 +10,7 @@ categories: music
 </center></figure>
 
 {:.content-narrow .content-block}
-this week i have a guest appearance from one of bestest friends on the planet, nicole c. she is a fantastic human being, who is deeply interesting, thoughtful and nostalgic. particularly nostalgic for her time back home in california, where she always looks back on her time driving around with the music and people she loves. i think this nostalgia for a time in a car with your favorite music and people is a nearly universal feeling (at least universal for people who live in the US, maybe). today nicole presents some of the songs that she holds dearly to her heart.  
+this week i have a guest appearance from one of bestest friends on the planet, nicole c. she is a fantastic human being who inspires me to be a better person every day. she is deeply interesting, thoughtful, kind, authentic and nostalgic. particularly nostalgic for her time back home in california. in this show, she looks back on her time driving around with her friends and listening to music. i think this nostalgia for a time in a car with your favorite music and people is a nearly universal feeling (at least universal for people who live in the US, maybe), but of course, every person's experinece is different. today nicole presents some of the songs that she holds dearly to her heart and that remind her of that time of her life.
 
 {:.content-narrow .content-block}
 enjoy!
