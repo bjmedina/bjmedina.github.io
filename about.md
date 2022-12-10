@@ -19,7 +19,7 @@ As far as my research interests go, I am broadly interested in understanding how
 Aside from my research, I also find much joy in giving back to my community. As someone who is a Latino first generation student, I believe that it is important that I share my successes with those who look and talk like I do. I've volunteered my time teaching and talking to students not only on campus, but in the community, on how to succeed as a underrepresented minority in STEM. At UCF, I was the Vice President of the Cognitive Sciences Club @ UCF, a club I co-founded, and Vice President of the UCF SACNAS chapter, both organizations that continue to strive to make opportunities available to all.
 
 {:.content-narrow .content-block}
-On my off-time I enjoy biking, baking, playing a number of instruments (typically alto saxophone or electric guitar) and making photographs. I also find pleasure spending tons of money on my [record collection](https://www.discogs.com/user/bj_medina/collection?page=1&limit=100&header=1&layout=big). I also have a radioshow called 'Brain Waves' that airs twice a month on [WMBR](https://wmbr.org/), the MIT radio station.
+On my off-time I enjoy biking, baking, playing a number of instruments (typically alto saxophone or electric guitar) and making photographs. I also find pleasure spending tons of money on my [record collection](https://www.discogs.com/user/bj_medina/collection?page=1&limit=100&header=1&layout=big). I also have a radioshow called 'Brain Waves' that airs twice a month on [WMBR](https://wmbr.org/), the MIT radio station. My Erdos number is 4. 
 
 {:.content-gif .content-block}
 <figure><center>
