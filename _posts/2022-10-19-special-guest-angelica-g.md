@@ -21,4 +21,4 @@ enjoy!
 
 
 {:.content-narrow .content-block}
-<playlist is currently private -- we're working on it>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7EGVTR2ZnV6ZdO9vm0WJgv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
