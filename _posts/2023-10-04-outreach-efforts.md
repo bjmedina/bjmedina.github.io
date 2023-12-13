@@ -1,7 +1,6 @@
 ---                                                                                                                        
 title: 6... mcgovern institute appearances
 categories: Academic
-
 ---
 
 {:.content-link .content-block}
