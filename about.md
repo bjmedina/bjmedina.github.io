@@ -20,6 +20,8 @@ Aside from my research, I also find much joy in giving back to my community. As 
 
 {:.content-narrow .content-block}
 On my off-time I enjoy biking, making [photographs](https://www.instagram.com/by_bjm/), and expressing myself through music (typically alto saxophone or electric bass on or off campus). On the music front, I'm part of the fantastic [Emerson/Harris Program for Private Study](https://mta.mit.edu/music/performance/emersonharris-program-private-study), where I currently study with [Mark Zaleski](https://www.markzaleski.com) at [Berklee](https://www.berklee.edu). I also find pleasure spending tons of money on my [record collection](https://www.discogs.com/user/bj_medina/collection?page=1&limit=100&header=1&layout=big) and on clothes that look like crap. I also have a radioshow called 'Brain Waves' that airs twice a month on [WMBR](https://wmbr.org/), the MIT radio station (message me for more details). My Erdos number is 4. 
+
+
 {:.content-gif .content-block}
 <figure><center>
   <img width="2" src="/images/BCS.gif" />
