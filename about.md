@@ -6,7 +6,7 @@ permalink: /about/
 
 {:.content-image .content-block}
 <figure><center>
-  <img width="400" src="/images/000415670002.jpg" data-action="zoom"/>
+  <img width="400" src="/images/bryan_j_medina_saxophone_2.jpeg" data-action="zoom"/>
 </center></figure>
 
 {:.content-narrow .content-block}
