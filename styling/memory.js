@@ -32,6 +32,20 @@ async function loadBuffer(audioCtx, url) {
   return audioCtx.decodeAudioData(await resp.arrayBuffer());
 }
 
+// Trim an AudioBuffer to maxSecs with a 100ms fade-out to avoid clicks
+function trimBuffer(audioCtx, buf, maxSecs) {
+  const sr = buf.sampleRate;
+  const maxFrames = Math.min(buf.length, Math.round(sr * maxSecs));
+  const fadeFrames = Math.min(Math.round(sr * 0.1), maxFrames);
+  const out = audioCtx.createBuffer(buf.numberOfChannels, maxFrames, sr);
+  for (let c = 0; c < buf.numberOfChannels; c++) {
+    const src = buf.getChannelData(c).slice(0, maxFrames);
+    for (let i = 0; i < fadeFrames; i++) src[maxFrames - 1 - i] *= i / fadeFrames;
+    out.copyToChannel(src, c);
+  }
+  return out;
+}
+
 // Synthesize a piano-like decaying tone as fallback
 function makeSynthBuf(audioCtx, freq, duration) {
   const sr = audioCtx.sampleRate;
@@ -104,20 +118,21 @@ function probit(p) {
   const container = document.getElementById('recog-container');
   if (!container) return;
 
-  // 12 sounds: Wikimedia Commons filename + synthesized fallback frequency
+  // 12 sounds: confirmed Wikimedia Commons CDN URLs (CORS-friendly)
+  // maxDur: trim long files to this many seconds; synthFreq: fallback pitch
   const POOL = [
-    { id:  1, label: 'cat',       file: 'Cat_miaow.ogg',            synthFreq: 1047, dur: 1.2 },
-    { id:  2, label: 'dog',       file: 'Dog_bark.ogg',             synthFreq:  220, dur: 0.8 },
-    { id:  3, label: 'rooster',   file: 'Cock-a-doodle-doo.ogg',    synthFreq:  659, dur: 1.5 },
-    { id:  4, label: 'frog',      file: 'Frog.ogg',                 synthFreq:  196, dur: 0.8 },
-    { id:  5, label: 'piano',     file: 'Piano_C4.ogg',             synthFreq:  262, dur: 1.5 },
-    { id:  6, label: 'trumpet',   file: 'Trumpet_C5.ogg',           synthFreq:  523, dur: 1.0 },
-    { id:  7, label: 'bell',      file: 'Church_bell.ogg',          synthFreq:  440, dur: 2.0 },
-    { id:  8, label: 'thunder',   file: 'Thunder.ogg',              synthFreq:   80, dur: 1.5 },
-    { id:  9, label: 'rain',      file: 'Rain_on_a_tin_roof.ogg',   synthFreq:  350, dur: 1.5 },
-    { id: 10, label: 'glass',     file: 'Breaking_glass.ogg',       synthFreq: 1400, dur: 0.6 },
-    { id: 11, label: 'crickets',  file: 'Cricket.ogg',              synthFreq: 3500, dur: 1.5 },
-    { id: 12, label: 'waterfall', file: 'Waterfall.ogg',            synthFreq:  400, dur: 1.5 },
+    { id:  1, label: 'cat',       url:  'https://upload.wikimedia.org/wikipedia/commons/a/a6/Meow.ogg',                                          maxDur: 2.0, synthFreq: 1047 },
+    { id:  2, label: 'dog',       url:  'https://upload.wikimedia.org/wikipedia/commons/a/a6/Barking_of_a_dog.ogg',                              maxDur: 2.6, synthFreq:  220 },
+    { id:  3, label: 'bird',      url:  'https://upload.wikimedia.org/wikipedia/commons/9/9d/Budgerigar_chirping.ogg',                           maxDur: 2.5, synthFreq: 2600 },
+    { id:  4, label: 'guitar',    url:  'https://upload.wikimedia.org/wikipedia/commons/7/7b/G_chord.ogg',                                       maxDur: 2.0, synthFreq:  196 },
+    { id:  5, label: 'piano',     url:  'https://upload.wikimedia.org/wikipedia/commons/b/b9/Piano-C-major-chord.ogg',                           maxDur: 2.0, synthFreq:  262 },
+    { id:  6, label: 'bell',      url:  'https://upload.wikimedia.org/wikipedia/commons/f/f7/Gong_or_bell_vibrant_%28short%29.ogg',              maxDur: 3.5, synthFreq:  440 },
+    { id:  7, label: 'rain',      url:  'https://upload.wikimedia.org/wikipedia/commons/a/ad/Rain.ogg',                                          maxDur: 3.0, synthFreq:  350 },
+    { id:  8, label: 'flute',     url:  'https://upload.wikimedia.org/wikipedia/commons/d/d4/Flute.ogg',                                         maxDur: 2.5, synthFreq:  523 },
+    { id:  9, label: 'snare',     url:  'https://upload.wikimedia.org/wikipedia/commons/b/b2/Snare_drum_unmuffled.ogg',                          maxDur: 2.5, synthFreq:  200 },
+    { id: 10, label: 'applause',  url:  'https://upload.wikimedia.org/wikipedia/commons/8/8e/Applause.ogg',                                      maxDur: 2.5, synthFreq:  800 },
+    { id: 11, label: 'trumpet',   url:  'https://upload.wikimedia.org/wikipedia/commons/9/94/02._B3-flat-trumpet.ogg',                           maxDur: 2.5, synthFreq:  466 },
+    { id: 12, label: 'cow',       file: 'Cow_moo.ogg',                                                                                           maxDur: 2.0, synthFreq:  147 },
   ];
 
   const N = 6;
@@ -130,12 +145,14 @@ function probit(p) {
   async function getBuffer(sound) {
     if (buffers.has(sound.id)) return buffers.get(sound.id);
     const ctx = getAudioCtx();
+    const maxDur = sound.maxDur || 2.5;
     let buf;
     try {
-      const url = await resolveWikimediaURL(sound.file);
-      buf = await loadBuffer(ctx, url);
+      // prefer direct URL; fall back to Wikimedia API resolution
+      const url = sound.url || await resolveWikimediaURL(sound.file);
+      buf = trimBuffer(ctx, await loadBuffer(ctx, url), maxDur);
     } catch (_) {
-      buf = makeSynthBuf(ctx, sound.synthFreq, sound.dur);
+      buf = makeSynthBuf(ctx, sound.synthFreq, maxDur);
       synthCount++;
     }
     buffers.set(sound.id, buf);
