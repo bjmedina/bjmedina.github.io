@@ -9,7 +9,7 @@ toys: true
 
 ## little interactive things
 
-some browser toys, mostly audio/visual. they use your microphone or camera and nothing leaves your device.
+some fun on the browser..., mostly audio/visual. they use your microphone or camera and nothing leaves your device.
 
 </div>
 
@@ -22,7 +22,6 @@ some browser toys, mostly audio/visual. they use your microphone or camera and n
     <canvas id="audio-canvas" width="600" height="200"></canvas>
     <br>
     <button id="audio-btn">Start listening</button>
-    <p class="note">requires microphone permission &mdash; audio is processed locally, not sent anywhere.</p>
   </div>
 
 </div>
@@ -36,7 +35,6 @@ some browser toys, mostly audio/visual. they use your microphone or camera and n
     <canvas id="camera-canvas" width="600" height="200"></canvas>
     <br>
     <button id="camera-btn">Start camera</button>
-    <p class="note">requires camera permission &mdash; video is processed locally, not sent anywhere.</p>
   </div>
 
 </div>
@@ -50,7 +48,6 @@ some browser toys, mostly audio/visual. they use your microphone or camera and n
     <canvas id="dino-canvas" width="600" height="150"></canvas>
     <br>
     <button id="dino-btn">Start game</button>
-    <p class="note">requires microphone &mdash; clap detection runs locally, nothing is sent anywhere.</p>
   </div>
 
 </div>
