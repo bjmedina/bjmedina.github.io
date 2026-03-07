@@ -1,4 +1,5 @@
 ---
+layout: default
 title: extras
 permalink: /extras/
 categories: Experience

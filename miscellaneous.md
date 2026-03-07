@@ -6,7 +6,7 @@ permalink: /miscellaneous/
 
 select chalk art for [Chalk of the Day](https://www.instagram.com/chalkoftheday/){:target="_blank"}, 2016-2020
 
-<div class="chalk content-mid">
+<div class="chalk-grid">
 
   <div> <a href="/imgs/chalk_video.gif" class="lightbox_trigger"> <img src="/imgs/chalk_video.gif"> </a> </div>
 

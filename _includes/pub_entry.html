@@ -1,0 +1,46 @@
+<div class="content-block">
+
+  {{ include.pub.authors }}
+  {% if include.pub.in-prep %}
+  (in prep).
+  {% else %}
+  ({{ include.pub.date | date: "%Y" }}
+  {%- if include.pub.in-press -%}, in press {%- endif -%}).
+  {% endif %}
+
+  {% if include.pub.doi %} <a href="{{ include.pub.doi }}" target="_blank"> {% endif %}
+  {{ include.pub.title }}
+  {%- if include.pub.doi -%} </a> {%- endif -%}.
+
+  {% if include.pub.editor %}
+  In {{ include.pub.editor }} (Ed.),
+  {% endif %}
+
+  {%- if include.pub.journal -%}
+  <i> {{ include.pub.journal }}</i>
+  {%- if include.pub.volume -%}, {{ include.pub.volume }}
+  {%- if include.pub.issue -%}({{ include.pub.issue }}){%- endif -%}
+  {%- endif -%}.
+  {%- endif -%}
+
+  {% if include.pub.publisher %}
+  {{ include.pub.publisher }}.
+  {% endif %}
+
+  {% if include.pub.ref-1-name %} [<a href="{{ include.pub.ref-1-link }}" target="_blank">{{ include.pub.ref-1-name }}</a>
+    {%- if include.pub.ref-2-name -%}, <a href="{{ include.pub.ref-2-link }}" target="_blank">{{ include.pub.ref-2-name }}</a>
+      {%- if include.pub.ref-3-name -%}, <a href="{{ include.pub.ref-3-link }}" target="_blank">{{ include.pub.ref-3-name }}</a>
+        {%- if include.pub.ref-4-name -%}, <a href="{{ include.pub.ref-4-link }}" target="_blank">{{ include.pub.ref-4-name }}</a>]
+        {%- else -%}]
+        {%- endif -%}
+      {%- else -%}]
+      {%- endif -%}
+    {%- else -%}]
+    {%- endif -%}
+  {% endif %}
+
+  <div class="content-note">
+    {{ include.pub.content }}
+  </div>
+
+</div>
