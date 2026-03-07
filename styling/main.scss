@@ -281,6 +281,105 @@ a {
 }
 
 /**
+ * memory games
+ */
+.memory-game {
+  padding: 0.5rem 0 1rem;
+  min-height: 60px;
+}
+
+.mem-phase-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $grey-color;
+  margin-bottom: 0.5rem;
+}
+
+.mem-sound-display {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $brand-color-light;
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+.mem-status { color: $text-color; font-style: italic; }
+
+.mem-desc, .mem-question { margin: 0.5rem 0; line-height: 1.5; }
+
+.mem-response-row {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.8rem 0;
+}
+
+.mem-btn-yes, .mem-btn-no {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  border: none;
+  cursor: pointer;
+  &:hover { opacity: 0.85; }
+}
+.mem-btn-yes { background: $brand-color-light; color: #fff; }
+.mem-btn-no  { background: $grey-color; color: $text-color; }
+
+.mem-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  td {
+    padding: 0.35rem 0.6rem;
+    border-bottom: 1px solid $grey-color;
+    &:first-child { color: $brand-color-light; font-weight: $emph-font-weight; width: 45%; }
+  }
+}
+
+.mem-note {
+  font-size: 0.82rem;
+  color: $grey-color;
+  line-height: 1.45;
+  margin: 0.5rem 0;
+}
+
+.mem-action-btn {
+  margin-top: 0.75rem;
+  padding: 0.4rem 1.1rem;
+  background: $brand-color-light;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  &:hover { background: $brand-color-dark; }
+}
+
+.simon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  max-width: 260px;
+  margin: 0 0 0.75rem;
+}
+
+.simon-btn {
+  width: 126px;
+  height: 126px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.08s, transform 0.08s, background 0.08s;
+  &:not(:disabled):active { opacity: 1; transform: scale(1.04); }
+  &:disabled { cursor: default; }
+}
+
+.simon-status { font-style: italic; color: $text-color; margin-bottom: 0.2rem; }
+.simon-score  { font-size: 0.85rem; color: $grey-color; margin-bottom: 0.4rem; }
+
+/**
  * lightbox
  */
 #lightbox {

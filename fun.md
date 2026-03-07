@@ -3,6 +3,7 @@ layout: default
 title: fun
 permalink: /fun/
 toys: true
+memory: true
 ---
 
 <div class="content-narrow content-block" markdown="1">
@@ -52,5 +53,23 @@ some browser toys, mostly audio/visual. they use your microphone or camera and n
     <button id="dino-btn">Start game</button>
     <p class="note">requires microphone &mdash; clap detection runs locally, nothing is sent anywhere.</p>
   </div>
+
+</div>
+
+<div class="content-narrow content-block">
+
+  <h3>auditory recognition memory</h3>
+  <p>hear 6 sounds in the study phase, then judge all 12 as old or new. you'll get d&prime; at the end &mdash; the same sensitivity measure used in real memory research.</p>
+
+  <div class="memory-game" id="recog-container"></div>
+
+</div>
+
+<div class="content-narrow content-block">
+
+  <h3>sequence memory</h3>
+  <p>watch the pattern of lights and tones, then repeat it back in order. how long a sequence can you hold?</p>
+
+  <div class="memory-game" id="simon-container"></div>
 
 </div>
