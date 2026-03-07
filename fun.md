@@ -40,3 +40,17 @@ some browser toys, mostly audio/visual. they use your microphone or camera and n
   </div>
 
 </div>
+
+<div class="content-narrow content-block">
+
+  <h3>clap jump</h3>
+  <p>clap to jump. dodge the cacti. spacebar also works if you don't have a mic.</p>
+
+  <div class="toy-widget">
+    <canvas id="dino-canvas" width="600" height="150"></canvas>
+    <br>
+    <button id="dino-btn">Start game</button>
+    <p class="note">requires microphone &mdash; clap detection runs locally, nothing is sent anywhere.</p>
+  </div>
+
+</div>
