@@ -242,6 +242,41 @@ a {
 }
 
 /**
+ * toy widgets
+ */
+.toy-widget {
+  margin: 1.5rem 0;
+
+  canvas {
+    display: block;
+    background: #000;
+    border: 1px solid $brand-color-dark;
+    max-width: 100%;
+  }
+
+  button {
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: $brand-color-light;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+
+    &:hover {
+      background: $brand-color-dark;
+    }
+  }
+
+  p.note {
+    font-size: 0.85rem;
+    color: $grey-color;
+    margin-top: 0.3rem;
+  }
+}
+
+/**
  * lightbox
  */
 #lightbox {
