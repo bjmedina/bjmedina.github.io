@@ -8,52 +8,32 @@ permalink: /music/
 
 ## saxophone
 
-a small collection of performances. mostly alto. some bass too. fill is rotating.
+a rotating collection of performances. mostly alto. some bass too.
 
 </div>
 
 <div class="content-narrow content-block">
 
-  <h3>performances</h3>
-
-  <!--
-    add a new performance by copying one of the blocks below.
-    - youtube: replace VIDEO_ID with the part after "v=" in the url
-    - local file: drop the file into /images/music/ (or wherever) and update src
-    delete the unused block.
-  -->
+  <h3>playlist</h3>
 
   <div class="performance">
     <div class="performance-media">
       <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        title="YouTube performance"
+        src="https://www.youtube.com/embed/aIAzo2somjs?list=PL900nRJsGdducFcZvvCKv8HNbMuf1IRlb"
+        title="saxophone performances"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
-    <p class="performance-caption">title of the piece &mdash; venue, date</p>
-  </div>
-
-  <div class="performance">
-    <div class="performance-media">
-      <video controls preload="metadata">
-        <source src="/images/music/example.mp4" type="video/mp4">
-        your browser doesn't support embedded video.
-      </video>
-    </div>
-    <p class="performance-caption">title of the piece &mdash; venue, date</p>
-  </div>
-
-  <div class="performance">
-    <audio controls preload="metadata">
-      <source src="/images/music/example.mp3" type="audio/mpeg">
-      your browser doesn't support embedded audio.
-    </audio>
-    <p class="performance-caption">title of the piece &mdash; recording date</p>
+    <p class="performance-caption">full playlist on <a href="https://www.youtube.com/playlist?list=PL900nRJsGdducFcZvvCKv8HNbMuf1IRlb" target="_blank">youtube</a></p>
   </div>
 
 </div>
+
+<!--
+  want to feature individual videos or local recordings? add a new section
+  below by copying one of the blocks. drop local files into /images/music/.
+-->
 
 <div class="content-narrow content-block" markdown="1">
 
