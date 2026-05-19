@@ -399,6 +399,62 @@ a {
     color: $text-color;
     margin-top: 0.4rem;
     line-height: 1.4;
+
+    .performance-title {
+      font-weight: $emph-font-weight;
+      color: $brand-color-light;
+    }
+
+    .performance-context {
+      color: lighten($text-color, 20%);
+    }
+
+    .performance-note {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: lighten($text-color, 25%);
+    }
+  }
+}
+
+.gig {
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.gig-header {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $grey-color;
+}
+
+.gig-venue {
+  font-size: 1.05rem;
+  font-weight: $emph-font-weight;
+  margin: 0;
+  color: $brand-color-light;
+}
+
+.gig-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: lighten($text-color, 20%);
+}
+
+.section-note {
+  font-size: 0.88rem;
+  color: lighten($text-color, 20%);
+  margin: 0 0 1rem;
+
+  code {
+    background: darken($background-color, 4%);
+    padding: 0.05rem 0.3rem;
+    border-radius: 2px;
+    font-size: 0.85em;
   }
 }
 
