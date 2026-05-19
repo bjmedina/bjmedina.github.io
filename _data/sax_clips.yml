@@ -1,15 +1,21 @@
 # featured saxophone moments
-# add one entry per clip. delete the example when you add a real one.
+# add one entry per clip.
 #
 # fields:
-#   video   - youtube video id (the part after "v=")
+#   video   - youtube video id (the part after "v=" or after "youtu.be/")
 #   start   - seconds into the video where the clip starts
 #   end     - seconds where the clip ends (optional)
 #   title   - what the clip is
 #   context - venue, group, date (optional)
 
-- video: aIAzo2somjs
-  start: 0
-  end: 30
-  title: example clip — replace me
-  context: venue, date
+- video: q8H9HCTB9xM
+  start: 2433
+  end: 2605
+  title: Naima (John Coltrane) — afro-latin arrangement, trading choruses with Matt Michalek
+  context: Killian Hall, MIT · April 2025
+
+- video: q8H9HCTB9xM
+  start: 3235
+  end: 3397
+  title: Sweeter Than (Kokoroko) — transcription
+  context: Killian Hall, MIT · April 2025

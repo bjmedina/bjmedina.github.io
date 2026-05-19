@@ -34,7 +34,7 @@ a rotating collection of performances. mostly alto. some bass too.
 <div class="content-narrow content-block">
 
   <h3>featured moments</h3>
-  <p class="section-note">specific spots in longer videos where i'm featured. add new clips in <code>_data/sax_clips.yml</code>.</p>
+  <p class="section-note">from my first recital, two years after i picked the saxophone back up.</p>
 
   {%- for clip in site.data.sax_clips -%}
   <div class="performance">
