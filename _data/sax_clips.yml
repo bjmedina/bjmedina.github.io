@@ -1,47 +1,52 @@
-# featured saxophone moments
-# add one entry per clip.
+# featured saxophone moments, grouped by gig
 #
-# fields:
+# top-level fields:
+#   venue   - where it was
+#   date    - when (free-form, e.g. "April 2025")
+#   meta    - small subtitle line (lineup, backstory, anything; optional)
+#   clips   - list of moments from that gig
+#
+# clip fields:
 #   video   - youtube video id (the part after "v=" or after "youtu.be/")
 #   start   - seconds into the video where the clip starts
-#   end     - seconds where the clip ends (optional; leave out to play to natural end)
-#   title   - what the clip is
-#   context - venue, group, date (optional)
-#   note    - small extra line, italicized, under the caption (optional)
+#   end     - seconds where the clip ends (optional)
+#   title   - tune name + what you're doing
+#   note    - small italic line under the title (optional)
 
-- video: q8H9HCTB9xM
-  start: 2433
-  end: 2605
-  title: Naima (John Coltrane) — afro-latin arrangement, trading choruses with Matt Michalek
-  context: Killian Hall, MIT · April 2025
-  note: from my first recital, two years after i picked the saxophone back up
+- venue: Killian Hall, MIT
+  date: April 2025
+  meta: from my first recital, two years after i picked the saxophone back up
+  clips:
+    - video: q8H9HCTB9xM
+      start: 2433
+      end: 2605
+      title: Naima (John Coltrane) — afro-latin arrangement, trading choruses with Matt Michalek
+    - video: q8H9HCTB9xM
+      start: 3235
+      end: 3397
+      title: Sweeter Than (Kokoroko) — transcription
 
-- video: q8H9HCTB9xM
-  start: 3235
-  end: 3397
-  title: Sweeter Than (Kokoroko) — transcription
-  context: Killian Hall, MIT · April 2025
+- venue: Minara Cafe
+  date: March 2026
+  meta: with Mambiseros
+  clips:
+    - video: aIAzo2somjs
+      start: 0
+      end: 101
+      title: Love is Everywhere (Pharoah Sanders) — solo
+    - video: aIAzo2somjs
+      start: 450
+      title: Fiesta de la Rumba (Afro-Cuban All Stars) — solo
 
-- video: aIAzo2somjs
-  start: 0
-  end: 101
-  title: Love is Everywhere (Pharoah Sanders) — solo
-  context: Minara Cafe, with Mambiseros · March 2026
-
-- video: aIAzo2somjs
-  start: 450
-  title: Fiesta de la Rumba (Afro-Cuban All Stars) — solo
-  context: Minara Cafe, with Mambiseros · March 2026
-
-- video: zNdAFLwLqV4
-  start: 210
-  end: 305
-  title: Desire (Kamasi Washington) — solo
-  context: The Substation, Roxbury · with Mambiseros · April 2026
-  note: we won a grant to play here
-
-- video: zNdAFLwLqV4
-  start: 1010
-  end: 1185
-  title: A Love Supreme (John Coltrane) — solo
-  context: The Substation, Roxbury · with Mambiseros · April 2026
+- venue: The Substation, Roxbury
+  date: April 2026
+  meta: with Mambiseros · we won a grant to play here
+  clips:
+    - video: zNdAFLwLqV4
+      start: 210
+      end: 305
+      title: Desire (Kamasi Washington) — solo
+    - video: zNdAFLwLqV4
+      start: 1010
+      end: 1185
+      title: A Love Supreme (John Coltrane) — solo

@@ -36,21 +36,29 @@ a rotating collection of performances. mostly alto. some bass too.
   <h3>featured moments</h3>
   <p class="section-note">specific spots in longer videos where i'm featured.</p>
 
-  {%- for clip in site.data.sax_clips -%}
-  <div class="performance">
-    <div class="performance-media">
-      <iframe
-        src="https://www.youtube.com/embed/{{ clip.video }}?start={{ clip.start | default: 0 }}{% if clip.end %}&amp;end={{ clip.end }}{% endif %}"
-        title="{{ clip.title | escape }}"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+  {%- for gig in site.data.sax_clips -%}
+  <div class="gig">
+    <div class="gig-header">
+      <h4 class="gig-venue">{{ gig.venue }} &mdash; {{ gig.date }}</h4>
+      {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
     </div>
-    <p class="performance-caption">
-      <span class="performance-title">{{ clip.title }}</span>
-      {%- if clip.context %} <span class="performance-context">&middot; {{ clip.context }}</span>{% endif -%}
-      {%- if clip.note %}<br><span class="performance-note">{{ clip.note }}</span>{% endif -%}
-    </p>
+
+    {%- for clip in gig.clips -%}
+    <div class="performance">
+      <div class="performance-media">
+        <iframe
+          src="https://www.youtube.com/embed/{{ clip.video }}?start={{ clip.start | default: 0 }}{% if clip.end %}&amp;end={{ clip.end }}{% endif %}"
+          title="{{ clip.title | escape }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p class="performance-caption">
+        <span class="performance-title">{{ clip.title }}</span>
+        {%- if clip.note %}<br><span class="performance-note">{{ clip.note }}</span>{% endif -%}
+      </p>
+    </div>
+    {%- endfor -%}
   </div>
   {%- endfor -%}
 
