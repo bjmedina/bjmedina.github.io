@@ -36,10 +36,11 @@ a rotating collection of performances. mostly alto. some bass too.
   <h3>featured moments</h3>
   <p class="section-note">specific spots in longer videos where i'm featured.</p>
 
-  {%- for gig in site.data.sax_clips -%}
+  {%- assign gigs = site.data.sax_clips | sort: "date" | reverse -%}
+  {%- for gig in gigs -%}
   <div class="gig">
     <div class="gig-header">
-      <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date }}{% endif %}</h4>
+      <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date | date: "%B %Y" }}{% endif %}</h4>
       {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
     </div>
 

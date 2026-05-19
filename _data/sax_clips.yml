@@ -2,7 +2,7 @@
 #
 # top-level fields:
 #   venue   - where it was
-#   date    - when (free-form, e.g. "April 2025")
+#   date    - YYYY-MM-DD (used for sorting; only month + year are displayed)
 #   meta    - small subtitle line (lineup, backstory, anything; optional)
 #   clips   - list of moments from that gig
 #
@@ -14,7 +14,7 @@
 #   note    - small italic line under the title (optional)
 
 - venue: Killian Hall, MIT
-  date: April 2025
+  date: 2025-04-01
   meta: from my first recital, two years after i picked the saxophone back up
   clips:
     - video: q8H9HCTB9xM
@@ -26,8 +26,18 @@
       end: 3397
       title: Sweeter Than (Kokoroko) — transcription
 
+- venue: Killian Hall, MIT
+  date: 2026-01-01
+  meta: with the MIT Afro Latin Ensemble
+  clips:
+    - video: MvyboZX6Ym8
+      start: 3128
+      end: 3360
+      title: Oye Como Va (Tito Puente) — solo
+      note: my lips absolutely gave out
+
 - venue: Minara Cafe
-  date: March 2026
+  date: 2026-03-15
   meta: with Mambiseros
   clips:
     - video: aIAzo2somjs
@@ -39,7 +49,7 @@
       title: Fiesta de la Rumba (Afro-Cuban All Stars) — solo
 
 - venue: The Substation, Roxbury
-  date: April 2026
+  date: 2026-04-17
   meta: with Mambiseros · we won a grant to play here
   clips:
     - video: zNdAFLwLqV4
@@ -50,13 +60,3 @@
       start: 1010
       end: 1185
       title: A Love Supreme (John Coltrane) — solo
-
-- venue: Killian Hall, MIT
-  date: January 2026
-  meta: with the MIT Afro Latin Ensemble
-  clips:
-    - video: MvyboZX6Ym8
-      start: 3128
-      end: 3360
-      title: Oye Como Va (Tito Puente) — solo
-      note: my lips absolutely gave out
