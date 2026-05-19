@@ -294,6 +294,80 @@ a {
 }
 
 /**
+ * research / publications
+ */
+.pub-section-header {
+  font-size: $header-font-size;
+  font-weight: $emph-font-weight;
+  margin: 0 0 $unit-spacing;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid $grey-color;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pub-entry {
+  line-height: 1.5;
+
+  .pub-title {
+    display: block;
+    font-weight: $emph-font-weight;
+    color: $brand-color-light;
+    margin-bottom: 0.15rem;
+  }
+
+  a.pub-title:hover {
+    color: $brand-color-dark;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .pub-authors {
+    font-size: 0.95rem;
+    color: $text-color;
+  }
+
+  .pub-meta {
+    font-size: 0.9rem;
+    color: lighten($text-color, 20%);
+    margin-top: 0.1rem;
+  }
+
+  .pub-refs {
+    margin-top: 0.35rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    a {
+      font-size: 0.8rem;
+      font-weight: $emph-font-weight;
+      padding: 0.15rem 0.55rem;
+      border: 1px solid $brand-color-dark;
+      color: $brand-color-dark;
+      border-radius: 3px;
+      transition: background 0.15s ease, color 0.15s ease;
+
+      &:hover {
+        background: $brand-color-dark;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .pub-note {
+    font-size: 0.88rem;
+    color: lighten($text-color, 15%);
+    margin-top: 0.35rem;
+  }
+}
+
+/**
  * performances (music page)
  */
 .performance {

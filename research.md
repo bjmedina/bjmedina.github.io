@@ -1,20 +1,25 @@
 ---
 layout: default
-title: Research
+title: research
 permalink: /research/
 ---
-{:.content-list-header .content-block}
-**Papers**
 
 {% assign sorted = site.publications | sort: "date" | reverse %}
 
-{%- for pub in sorted -%}
-  {% if pub.paper %}{% include pub_entry.html pub=pub %}{%- endif -%}
-{% endfor %}
+<div class="content-narrow content-block">
+  <h2 class="pub-section-header">papers</h2>
+  <div class="pub-list">
+    {%- for pub in sorted -%}
+      {%- if pub.paper -%}{% include pub_entry.html pub=pub %}{%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
 
-{:.content-list-header .content-block}
-**Presentations**
-
-{%- for pub in sorted -%}
-  {% if pub.presentation %}{% include pub_entry.html pub=pub %}{%- endif -%}
-{% endfor %}
+<div class="content-narrow content-block">
+  <h2 class="pub-section-header">presentations</h2>
+  <div class="pub-list">
+    {%- for pub in sorted -%}
+      {%- if pub.presentation -%}{% include pub_entry.html pub=pub %}{%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
