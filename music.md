@@ -39,7 +39,7 @@ a rotating collection of performances. mostly alto. some bass too.
   {%- for gig in site.data.sax_clips -%}
   <div class="gig">
     <div class="gig-header">
-      <h4 class="gig-venue">{{ gig.venue }} &mdash; {{ gig.date }}</h4>
+      <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date }}{% endif %}</h4>
       {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
     </div>
 
