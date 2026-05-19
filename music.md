@@ -34,7 +34,7 @@ a rotating collection of performances. mostly alto. some bass too.
 <div class="content-narrow content-block">
 
   <h3>featured moments</h3>
-  <p class="section-note">from my first recital, two years after i picked the saxophone back up.</p>
+  <p class="section-note">specific spots in longer videos where i'm featured.</p>
 
   {%- for clip in site.data.sax_clips -%}
   <div class="performance">
@@ -49,6 +49,7 @@ a rotating collection of performances. mostly alto. some bass too.
     <p class="performance-caption">
       <span class="performance-title">{{ clip.title }}</span>
       {%- if clip.context %} <span class="performance-context">&middot; {{ clip.context }}</span>{% endif -%}
+      {%- if clip.note %}<br><span class="performance-note">{{ clip.note }}</span>{% endif -%}
     </p>
   </div>
   {%- endfor -%}

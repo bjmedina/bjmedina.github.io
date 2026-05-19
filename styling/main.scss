@@ -408,6 +408,12 @@ a {
     .performance-context {
       color: lighten($text-color, 20%);
     }
+
+    .performance-note {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: lighten($text-color, 25%);
+    }
   }
 }
 

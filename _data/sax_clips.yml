@@ -4,18 +4,31 @@
 # fields:
 #   video   - youtube video id (the part after "v=" or after "youtu.be/")
 #   start   - seconds into the video where the clip starts
-#   end     - seconds where the clip ends (optional)
+#   end     - seconds where the clip ends (optional; leave out to play to natural end)
 #   title   - what the clip is
 #   context - venue, group, date (optional)
+#   note    - small extra line, italicized, under the caption (optional)
 
 - video: q8H9HCTB9xM
   start: 2433
   end: 2605
   title: Naima (John Coltrane) — afro-latin arrangement, trading choruses with Matt Michalek
   context: Killian Hall, MIT · April 2025
+  note: from my first recital, two years after i picked the saxophone back up
 
 - video: q8H9HCTB9xM
   start: 3235
   end: 3397
   title: Sweeter Than (Kokoroko) — transcription
   context: Killian Hall, MIT · April 2025
+
+- video: aIAzo2somjs
+  start: 0
+  end: 101
+  title: Love is Everywhere (Pharoah Sanders) — solo
+  context: Minara Cafe, with Mambiseros
+
+- video: aIAzo2somjs
+  start: 450
+  title: Fiesta de la Rumba (Afro-Cuban All Stars) — solo
+  context: Minara Cafe, with Mambiseros
