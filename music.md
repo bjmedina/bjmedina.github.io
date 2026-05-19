@@ -30,11 +30,31 @@ a rotating collection of performances. mostly alto. some bass too.
 
 </div>
 
-<!--
-  want to feature individual videos or local recordings? add a new section
-  below by copying one of the blocks. drop local files into /images/music/.
--->
+{%- if site.data.sax_clips and site.data.sax_clips.size > 0 -%}
+<div class="content-narrow content-block">
 
+  <h3>featured moments</h3>
+  <p class="section-note">specific spots in longer videos where i'm featured. add new clips in <code>_data/sax_clips.yml</code>.</p>
+
+  {%- for clip in site.data.sax_clips -%}
+  <div class="performance">
+    <div class="performance-media">
+      <iframe
+        src="https://www.youtube.com/embed/{{ clip.video }}?start={{ clip.start | default: 0 }}{% if clip.end %}&amp;end={{ clip.end }}{% endif %}"
+        title="{{ clip.title | escape }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <p class="performance-caption">
+      <span class="performance-title">{{ clip.title }}</span>
+      {%- if clip.context %} <span class="performance-context">&middot; {{ clip.context }}</span>{% endif -%}
+    </p>
+  </div>
+  {%- endfor -%}
+
+</div>
+{%- endif -%}
 <div class="content-narrow content-block" markdown="1">
 
 i also have a radioshow on WMBR &mdash; playlists live on the [radio]({{ "/radio/" | relative_url }}) page.

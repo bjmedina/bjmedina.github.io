@@ -399,6 +399,28 @@ a {
     color: $text-color;
     margin-top: 0.4rem;
     line-height: 1.4;
+
+    .performance-title {
+      font-weight: $emph-font-weight;
+      color: $brand-color-light;
+    }
+
+    .performance-context {
+      color: lighten($text-color, 20%);
+    }
+  }
+}
+
+.section-note {
+  font-size: 0.88rem;
+  color: lighten($text-color, 20%);
+  margin: 0 0 1rem;
+
+  code {
+    background: darken($background-color, 4%);
+    padding: 0.05rem 0.3rem;
+    border-radius: 2px;
+    font-size: 0.85em;
   }
 }
 

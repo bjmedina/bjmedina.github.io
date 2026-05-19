@@ -1,0 +1,15 @@
+# featured saxophone moments
+# add one entry per clip. delete the example when you add a real one.
+#
+# fields:
+#   video   - youtube video id (the part after "v=")
+#   start   - seconds into the video where the clip starts
+#   end     - seconds where the clip ends (optional)
+#   title   - what the clip is
+#   context - venue, group, date (optional)
+
+- video: aIAzo2somjs
+  start: 0
+  end: 30
+  title: example clip — replace me
+  context: venue, date
