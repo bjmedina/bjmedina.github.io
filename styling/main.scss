@@ -417,6 +417,35 @@ a {
   }
 }
 
+.music-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.music-filter {
+  font-family: $base-font-family;
+  font-size: 0.85rem;
+  font-weight: $emph-font-weight;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid $brand-color-dark;
+  background: transparent;
+  color: $brand-color-dark;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: lighten($brand-color-dark, 35%);
+  }
+
+  &.is-active {
+    background: $brand-color-dark;
+    color: #fff;
+  }
+}
+
 .gig {
   margin-bottom: 2.5rem;
 

@@ -8,8 +8,23 @@ permalink: /music/
 <div class="content-narrow content-block">
 
   {%- assign gigs = site.data.sax_clips | sort: "date" | reverse -%}
+
+  {%- assign years = "" -%}
   {%- for gig in gigs -%}
-  <div class="gig">
+    {%- assign y = gig.date | date: "%Y" -%}
+    {%- unless years contains y -%}{%- assign years = years | append: y | append: "," -%}{%- endunless -%}
+  {%- endfor -%}
+  {%- assign years = years | split: "," -%}
+
+  <div class="music-filters" id="music-filters">
+    <button type="button" class="music-filter is-active" data-year="all">all</button>
+    {%- for y in years -%}
+    <button type="button" class="music-filter" data-year="{{ y }}">{{ y }}</button>
+    {%- endfor -%}
+  </div>
+
+  {%- for gig in gigs -%}
+  <div class="gig" data-year="{{ gig.date | date: '%Y' }}">
     <div class="gig-header">
       <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date | date: "%B %Y" }}{% endif %}</h4>
       {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
