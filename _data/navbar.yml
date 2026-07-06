@@ -2,15 +2,11 @@
   link: /about/
 - name: research
   link: /research/
-- name: music
-  link: /music/
-- name: radio
-  link: /radio/
-- name: blog
-  link: /blog/
-- name: extras
-  link: /extras/
+- name: art
+  link: /art/
 - name: fun
   link: /fun/
+- name: extras
+  link: /extras/
 - name: contact
   link: /contact/

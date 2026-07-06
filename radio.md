@@ -1,22 +1,12 @@
 ---
-layout: default
-title: WMBR
+layout: null
 permalink: /radio/
-categories: music
+sitemap: false
 ---
-
-{:.content-list-header .content-block}
-**WMBR playlists**
-
-{:.content-narrow .content-block}
-I have a radioshow on [WMBR](https://wmbr.org/). below are the playlists for my shows, as they air
-
-{:.content-narrow .content-block}
-<div class="content list">
-  {% for post in site.categories.music %}
-    <div class="list-item">
-      <p class="list-post-title">
-        <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a>
-      </p>
-    </div>
-  {% endfor %}
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<meta http-equiv="refresh" content="0; url=/art/#radio">
+<link rel="canonical" href="/art/#radio">
+<script>location.replace('/art/#radio');</script>
+Redirecting to <a href="/art/#radio">/art/#radio</a>.

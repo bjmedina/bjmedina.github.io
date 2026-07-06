@@ -1,19 +1,12 @@
 ---
-layout: default
-title: Blog
+layout: null
 permalink: /blog/
-categories: Personal
+sitemap: false
 ---
-
-{:.content-list-header .content-block}
-**Blog (?)**
-
-{:.content-narrow .content-block}
-<div class="content list">
-  {% for post in site.categories.Personal %}
-    <div class="list-item">
-      <p class="list-post-title">
-        <a href="{{ site.baseurl }}{{ post.url }}">- {{ post.title }}</a>
-      </p>
-    </div>
-  {% endfor %}
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<meta http-equiv="refresh" content="0; url=/art/#writing">
+<link rel="canonical" href="/art/#writing">
+<script>location.replace('/art/#writing');</script>
+Redirecting to <a href="/art/#writing">/art/#writing</a>.

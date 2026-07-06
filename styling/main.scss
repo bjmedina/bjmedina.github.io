@@ -617,6 +617,92 @@ a {
 .simon-score  { font-size: 0.85rem; color: $grey-color; margin-bottom: 0.4rem; }
 
 /**
+ * landing hero — blend the black around the brain into the cream
+ */
+.hero {
+  text-align: center;
+}
+.hero-brain {
+  mix-blend-mode: multiply;
+  filter: invert(1);
+  max-width: 100%;
+}
+
+/**
+ * art page (music + radio + writing)
+ */
+.section-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  color: $dim-color;
+  border-bottom: 1px dashed $grey-color;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+
+  a { color: $brand-color-light; font-weight: $emph-font-weight; }
+}
+
+.art-section {
+  padding-top: 2rem;
+  scroll-margin-top: 5rem;
+}
+.art-section + .art-section {
+  border-top: 1px dashed $grey-color;
+  margin-top: 2rem;
+}
+
+.section-header {
+  font-size: $header-font-size;
+  font-weight: $emph-font-weight;
+  color: $brand-color-light;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.typewrite.typing::after,
+.typewrite.typed::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 0.15em;
+  animation: bj-blink 1s steps(2, start) infinite;
+}
+.typewrite.typed::after { opacity: 0.6; }
+@keyframes bj-blink { to { visibility: hidden; } }
+
+.art-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed $grey-color;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    &:last-child { border-bottom: 0; }
+  }
+}
+.art-date { color: $dim-color; font-size: 0.85rem; }
+
+/**
+ * site footer (rotating note)
+ */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.25rem 0 2rem;
+  border-top: 1px dashed $grey-color;
+  text-align: center;
+  color: $dim-color;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/**
  * lightbox
  */
 #lightbox {
