@@ -40,16 +40,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Typewriter section headers — animate text in char-by-char on load
+  // Typewriter — animate every page header in char-by-char on load.
+  // Skips per-item headers inside gig / pub / performance cards.
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('.typewrite').forEach(function (el, i) {
+  var headerNodes = document.querySelectorAll(
+    'main.page-content h1, main.page-content h2, main.page-content h3, .typewrite'
+  );
+  var headers = Array.prototype.filter.call(headerNodes, function (el) {
+    if (el.dataset.notype != null) return false;
+    return !el.closest('.gig, .pub-entry, .performance-caption');
+  });
+  headers.forEach(function (el, i) {
+    el.classList.add('typewrite');
     var text = el.dataset.text || el.textContent;
     if (prefersReduced) { el.textContent = text; return; }
     el.textContent = '';
     el.classList.add('typing');
     var idx = 0;
-    var delay = 220 + i * 350;         // stagger multiple headers
-    var perChar = 40;                  // ms per character
+    var delay = 180 + i * 260;         // stagger multiple headers
+    var perChar = 35;                  // ms per character
     setTimeout(function step() {
       if (idx <= text.length) {
         el.textContent = text.slice(0, idx++);
