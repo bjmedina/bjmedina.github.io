@@ -4,24 +4,26 @@
 /**
  * defaults
  */
-$base-font-family:  Helvetica, sans-serif !default;
-$base-font-size:    15px !default;
+$base-font-family:  ui-monospace, "SF Mono", "JetBrains Mono", "IBM Plex Mono", Menlo, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$base-font-size:    14.5px !default;
 $base-font-weight:  400 !default;
-$large-font-size:   30px !default;
-$header-font-size:  20px !default;
-$emph-font-weight:  600 !default;
-$title-font-weight: 1000 !default;
-$emph-link-size: 60px !default;
-$nav-font-size: 16px !default;
+$large-font-size:   18px !default;
+$header-font-size:  17px !default;
+$emph-font-weight:  700 !default;
+$title-font-weight: 700 !default;
+$emph-link-size: 32px !default;
+$nav-font-size: 14px !default;
 
 $unit-spacing:      15px !default;
-$nav-spacing:       15px !default;
+$nav-spacing:       18px !default;
 
-$text-color:        #333333 !default;
-$background-color:  #f5f5f5 !default;
+$text-color:        #1c2113 !default;
+$background-color:  #f4ecd8 !default;
+$background-alt:    #ede2c1 !default;
 $brand-color-dark:  #728c69 !default;
-$brand-color-light: #043927 !default;
-$grey-color:        #c2c2c2 !default;
+$brand-color-light: #044f2f !default;
+$grey-color:        #b8ac83 !default;
+$dim-color:         #6a7159 !default;
 
 $content-width:     800px !default;
 $content-width-narrow-img:  500px !default;
@@ -49,19 +51,27 @@ html {
 
 body {
   font: $base-font-weight $base-font-size $base-font-family;
+  line-height: 1.6;
   color: $text-color;
   background-color: $background-color;
+  margin: 0;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  scroll-behavior: smooth;
 }
 
 p {
-  margin-top: $base-font-size / 2;
-  margin-bottom: $base-font-size / 2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $brand-color-light;
+  letter-spacing: 0.02em;
 }
 
 /**
@@ -112,15 +122,18 @@ a {
  * site header
  */
 .site-header {
-  max-width: $content-width;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: $unit-spacing * 2;
-  margin-bottom: $unit-spacing * 1.5;
+  background: $brand-color-light;
+  color: $background-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: $unit-spacing * 2;
+  padding: $unit-spacing * 0.85 0;
 
   .wrapper {
+    max-width: $content-width;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: $unit-spacing;
@@ -128,24 +141,31 @@ a {
 }
 
 .site-title {
-  line-height: $large-font-size;
   font-size: $large-font-size;
   font-weight: $title-font-weight;
+  letter-spacing: 0.02em;
 
   p {
     margin: 0;
+    color: $background-color;
   }
 }
 
 
 .site-nav {
-  line-height: $large-font-size;
-  font-weight: $emph-font-weight;
-  color: $text-color;
+  font-weight: 500;
+  color: $background-color;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
 
   a {
+    color: $background-color;
+    font-weight: 500;
+
     &:hover {
-      color: $brand-color-dark;
+      color: $background-color;
       background-color: transparent;
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -153,18 +173,12 @@ a {
   }
 
   .nav-item {
-    margin-left: $nav-spacing;
     font-size: $nav-font-size;
+    margin: 0;
   }
 
   .socials {
-    margin-left: $nav-spacing / 2;
-  }
-
-  @include media-query($on-palm) {
-    .nav-item:first-child {
-      margin-left: 0;
-    }
+    margin-left: 0.4rem;
   }
 }
 
@@ -207,13 +221,14 @@ a {
 .content-link {
 
   a {
-     color: $brand-color-dark;
+     color: $brand-color-light;
      font-weight: $emph-font-weight;
      text-decoration: none;
      font-size: $emph-link-size;
 
      &:hover {
-       background-color: $brand-color-light;
+       color: $brand-color-dark;
+       text-decoration: underline;
      }
   }
 }
@@ -271,7 +286,7 @@ a {
     margin-top: 0.5rem;
     padding: 0.4rem 1rem;
     background: $brand-color-light;
-    color: #fff;
+    color: $background-color;
     border: none;
     cursor: pointer;
     font-family: $base-font-family;
@@ -354,7 +369,7 @@ a {
 
       &:hover {
         background: $brand-color-dark;
-        color: #fff;
+        color: $background-color;
         text-decoration: none;
       }
     }
@@ -417,32 +432,76 @@ a {
   }
 }
 
-.gig {
-  margin-bottom: 2.5rem;
+.music-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
 
-  &:last-child {
-    margin-bottom: 0;
+.music-filter {
+  font-family: $base-font-family;
+  font-size: 0.85rem;
+  font-weight: $emph-font-weight;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid $brand-color-dark;
+  background: transparent;
+  color: $brand-color-dark;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: lighten($brand-color-dark, 35%);
+  }
+
+  &.is-active {
+    background: $brand-color-dark;
+    color: $background-color;
+  }
+}
+
+.gig-list {
+  columns: 2;
+  column-gap: 1.25rem;
+
+  @include media-query(600px) {
+    columns: 1;
+  }
+}
+
+.gig {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
+  border: 1px solid $brand-color-light;
+  background: $background-alt;
+  padding: 0.9rem 1.1rem 1rem;
+
+  .performance {
+    margin: 0.7rem 0 0;
   }
 }
 
 .gig-header {
-  margin: 0 0 0.75rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid $grey-color;
+  margin: 0 0 0.35rem;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .gig-venue {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: $emph-font-weight;
   margin: 0;
   color: $brand-color-light;
+  letter-spacing: 0.01em;
 }
 
 .gig-meta {
-  margin: 0.25rem 0 0;
-  font-size: 0.88rem;
-  font-style: italic;
-  color: lighten($text-color, 20%);
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: $dim-color;
 }
 
 .section-note {
@@ -501,7 +560,7 @@ a {
   cursor: pointer;
   &:hover { opacity: 0.85; }
 }
-.mem-btn-yes { background: $brand-color-light; color: #fff; }
+.mem-btn-yes { background: $brand-color-light; color: $background-color; }
 .mem-btn-no  { background: $grey-color; color: $text-color; }
 
 .mem-table {
@@ -526,7 +585,7 @@ a {
   margin-top: 0.75rem;
   padding: 0.4rem 1.1rem;
   background: $brand-color-light;
-  color: #fff;
+  color: $background-color;
   border: none;
   cursor: pointer;
   font-family: $base-font-family;

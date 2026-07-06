@@ -23,4 +23,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Year filter on the music page
+  var musicFilters = document.getElementById('music-filters');
+  if (musicFilters) {
+    var gigEls = document.querySelectorAll('.gig[data-year]');
+    musicFilters.addEventListener('click', function (e) {
+      var btn = e.target.closest('.music-filter');
+      if (!btn) return;
+      var year = btn.dataset.year;
+      musicFilters.querySelectorAll('.music-filter').forEach(function (b) {
+        b.classList.toggle('is-active', b === btn);
+      });
+      gigEls.forEach(function (g) {
+        g.style.display = (year === 'all' || g.dataset.year === year) ? '' : 'none';
+      });
+    });
+  }
+
 });
