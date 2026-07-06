@@ -23,31 +23,33 @@ permalink: /music/
     {%- endfor -%}
   </div>
 
-  {%- for gig in gigs -%}
-  <div class="gig" data-year="{{ gig.date | date: '%Y' }}">
-    <div class="gig-header">
-      <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date | date: "%B %Y" }}{% endif %}</h4>
-      {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
-    </div>
-
-    {%- for clip in gig.clips -%}
-    <div class="performance">
-      <div class="performance-media">
-        <iframe
-          src="https://www.youtube.com/embed/{{ clip.video }}?start={{ clip.start | default: 0 }}{% if clip.end %}&amp;end={{ clip.end }}{% endif %}"
-          title="{{ clip.title | escape }}"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+  <div class="gig-list">
+    {%- for gig in gigs -%}
+    <div class="gig" data-year="{{ gig.date | date: '%Y' }}">
+      <div class="gig-header">
+        <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date | date: "%B %Y" }}{% endif %}</h4>
+        {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
       </div>
-      <p class="performance-caption">
-        <span class="performance-title">{{ clip.title }}</span>
-        {%- if clip.note %}<br><span class="performance-note">{{ clip.note }}</span>{% endif -%}
-      </p>
+
+      {%- for clip in gig.clips -%}
+      <div class="performance">
+        <div class="performance-media">
+          <iframe
+            src="https://www.youtube.com/embed/{{ clip.video }}?start={{ clip.start | default: 0 }}{% if clip.end %}&amp;end={{ clip.end }}{% endif %}"
+            title="{{ clip.title | escape }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="performance-caption">
+          <span class="performance-title">{{ clip.title }}</span>
+          {%- if clip.note %}<br><span class="performance-note">{{ clip.note }}</span>{% endif -%}
+        </p>
+      </div>
+      {%- endfor -%}
     </div>
     {%- endfor -%}
   </div>
-  {%- endfor -%}
 
 </div>
 {%- endif -%}
