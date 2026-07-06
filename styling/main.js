@@ -40,4 +40,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Typewriter section headers — animate text in char-by-char on load
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.typewrite').forEach(function (el, i) {
+    var text = el.dataset.text || el.textContent;
+    if (prefersReduced) { el.textContent = text; return; }
+    el.textContent = '';
+    el.classList.add('typing');
+    var idx = 0;
+    var delay = 220 + i * 350;         // stagger multiple headers
+    var perChar = 40;                  // ms per character
+    setTimeout(function step() {
+      if (idx <= text.length) {
+        el.textContent = text.slice(0, idx++);
+        setTimeout(step, perChar);
+      } else {
+        el.classList.remove('typing');
+        el.classList.add('typed');
+      }
+    }, delay);
+  });
+
+  // Rotating footer note — pick a random one per page load
+  var footerNote = document.getElementById('footer-note');
+  if (footerNote && footerNote.dataset.notes) {
+    try {
+      var notes = JSON.parse(footerNote.dataset.notes);
+      if (Array.isArray(notes) && notes.length) {
+        var pick = notes[Math.floor(Math.random() * notes.length)];
+        footerNote.textContent = pick;
+      }
+    } catch (_) { /* leave the default */ }
+  }
+
 });
