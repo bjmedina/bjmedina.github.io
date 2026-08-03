@@ -473,7 +473,7 @@ a {
 
 .gig-list {
   columns: 2;
-  column-gap: 1.25rem;
+  column-gap: 2rem;
 
   @include media-query(600px) {
     columns: 1;
@@ -484,13 +484,17 @@ a {
   display: inline-block;
   width: 100%;
   break-inside: avoid;
-  margin: 0 0 1.25rem;
+  margin: 0 0 2rem;
   border: 1px solid $brand-color-light;
   background: $background-alt;
-  padding: 0.9rem 1.1rem 1rem;
+  padding: 1.1rem 1.25rem 1.25rem;
 
   .performance {
-    margin: 0.7rem 0 0;
+    margin: 1rem 0 0;
+
+    & + .performance {
+      margin-top: 1.5rem;
+    }
   }
 }
 
