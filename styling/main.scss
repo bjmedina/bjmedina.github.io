@@ -17,13 +17,14 @@ $nav-font-size: 14px !default;
 $unit-spacing:      15px !default;
 $nav-spacing:       18px !default;
 
-$text-color:        #1c2113 !default;
-$background-color:  #f4ecd8 !default;
-$background-alt:    #ede2c1 !default;
+$text-color:        #ede2c1 !default;
+$background-color:  #0e1610 !default;
+$background-alt:    #17201a !default;
 $brand-color-dark:  #728c69 !default;
-$brand-color-light: #044f2f !default;
-$grey-color:        #b8ac83 !default;
-$dim-color:         #6a7159 !default;
+$brand-color-light: #a2c398 !default;
+$brand-color-deep:  #044f2f !default;
+$grey-color:        #4a5a45 !default;
+$dim-color:         #8a9584 !default;
 
 $content-width:     800px !default;
 $content-width-narrow-img:  500px !default;
@@ -122,8 +123,8 @@ a {
  * site header
  */
 .site-header {
-  background: $brand-color-light;
-  color: $background-color;
+  background: $brand-color-deep;
+  color: $text-color;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -147,25 +148,25 @@ a {
 
   p {
     margin: 0;
-    color: $background-color;
+    color: $text-color;
   }
 }
 
 
 .site-nav {
   font-weight: 500;
-  color: $background-color;
+  color: $text-color;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.35rem 1rem;
 
   a {
-    color: $background-color;
+    color: $text-color;
     font-weight: 500;
 
     &:hover {
-      color: $background-color;
+      color: $text-color;
       background-color: transparent;
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -294,8 +295,8 @@ a {
   button {
     margin-top: 0.5rem;
     padding: 0.4rem 1rem;
-    background: $brand-color-light;
-    color: $background-color;
+    background: $brand-color-deep;
+    color: $text-color;
     border: none;
     cursor: pointer;
     font-family: $base-font-family;
@@ -357,7 +358,7 @@ a {
 
   .pub-meta {
     font-size: 0.9rem;
-    color: lighten($text-color, 20%);
+    color: $dim-color;
     margin-top: 0.1rem;
   }
 
@@ -378,7 +379,7 @@ a {
 
       &:hover {
         background: $brand-color-dark;
-        color: $background-color;
+        color: $text-color;
         text-decoration: none;
       }
     }
@@ -386,7 +387,7 @@ a {
 
   .pub-note {
     font-size: 0.88rem;
-    color: lighten($text-color, 15%);
+    color: $dim-color;
     margin-top: 0.35rem;
   }
 }
@@ -430,13 +431,13 @@ a {
     }
 
     .performance-context {
-      color: lighten($text-color, 20%);
+      color: $dim-color;
     }
 
     .performance-note {
       font-style: italic;
       font-size: 0.85rem;
-      color: lighten($text-color, 25%);
+      color: $dim-color;
     }
   }
 }
@@ -461,12 +462,12 @@ a {
   transition: background 0.15s ease, color 0.15s ease;
 
   &:hover {
-    background: lighten($brand-color-dark, 35%);
+    background: rgba($brand-color-dark, 0.18);
   }
 
   &.is-active {
     background: $brand-color-dark;
-    color: $background-color;
+    color: $text-color;
   }
 }
 
@@ -515,11 +516,11 @@ a {
 
 .section-note {
   font-size: 0.88rem;
-  color: lighten($text-color, 20%);
+  color: $dim-color;
   margin: 0 0 1rem;
 
   code {
-    background: darken($background-color, 4%);
+    background: lighten($background-color, 8%);
     padding: 0.05rem 0.3rem;
     border-radius: 2px;
     font-size: 0.85em;
@@ -569,7 +570,7 @@ a {
   cursor: pointer;
   &:hover { opacity: 0.85; }
 }
-.mem-btn-yes { background: $brand-color-light; color: $background-color; }
+.mem-btn-yes { background: $brand-color-deep; color: $text-color; }
 .mem-btn-no  { background: $grey-color; color: $text-color; }
 
 .mem-table {
@@ -593,8 +594,8 @@ a {
 .mem-action-btn {
   margin-top: 0.75rem;
   padding: 0.4rem 1.1rem;
-  background: $brand-color-light;
-  color: $background-color;
+  background: $brand-color-deep;
+  color: $text-color;
   border: none;
   cursor: pointer;
   font-family: $base-font-family;
@@ -626,14 +627,14 @@ a {
 .simon-score  { font-size: 0.85rem; color: $grey-color; margin-bottom: 0.4rem; }
 
 /**
- * landing hero — blend the black around the brain into the cream
+ * landing hero — screen blend so the black around the brain
+ * dissolves into the dark page bg, brain glows on top.
  */
 .hero {
   text-align: center;
 }
 .hero-brain {
-  mix-blend-mode: multiply;
-  filter: invert(1);
+  mix-blend-mode: screen;
   max-width: 100%;
 }
 
