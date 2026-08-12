@@ -523,7 +523,7 @@ h3.sub {
   transform-origin: center center;
 
   &:hover {
-    transform: scale(1.08);
+    transform: scale(1.25);
   }
 
   @include media-query(500px) {
