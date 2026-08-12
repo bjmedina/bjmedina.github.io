@@ -17,14 +17,15 @@ $nav-font-size: 14px !default;
 $unit-spacing:      15px !default;
 $nav-spacing:       18px !default;
 
-$text-color:        #f0e6c8 !default;
-$background-color:  #2f4132 !default;
-$background-alt:    #3b4f3c !default;
-$brand-color-dark:  #728c69 !default;
-$brand-color-light: #b8935a !default;
+$text-color:        #253521 !default;
+$background-color:  #f2ebd5 !default;
+$background-alt:    #eadfba !default;
+$brand-color-dark:  #6b8563 !default;
+$brand-color-light: #a67f45 !default;
 $brand-color-deep:  #044f2f !default;
-$grey-color:        #4a5a45 !default;
-$dim-color:         #8a9584 !default;
+$brand-fg:          #f2ebd5 !default;   // text color on brand-colored bgs (cream, theme-invariant)
+$grey-color:        #c5b696 !default;
+$dim-color:         #6c7561 !default;
 
 $content-width:     720px !default;
 $content-width-narrow-img:  500px !default;
@@ -79,9 +80,9 @@ body::after {
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.16;
+  opacity: 0.18;
   mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.94 0 0 0 0 0.9 0 0 0 0 0.78 0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 p {
@@ -305,7 +306,7 @@ a {
     margin-top: 0.5rem;
     padding: 0.4rem 1rem;
     background: $brand-color-deep;
-    color: $text-color;
+    color: $brand-fg;
     border: none;
     cursor: pointer;
     font-family: $base-font-family;
@@ -438,7 +439,7 @@ h3.sub {
 
         &:hover {
           background: $brand-color-dark;
-          color: $text-color;
+          color: $brand-fg;
           text-decoration: none;
         }
       }
@@ -504,7 +505,7 @@ h3.sub {
 
   &.is-active {
     background: $brand-color-dark;
-    color: $text-color;
+    color: $brand-fg;
   }
 }
 
@@ -580,7 +581,7 @@ h3.sub {
   cursor: pointer;
   &:hover { opacity: 0.85; }
 }
-.mem-btn-yes { background: $brand-color-deep; color: $text-color; }
+.mem-btn-yes { background: $brand-color-deep; color: $brand-fg; }
 .mem-btn-no  { background: $grey-color; color: $text-color; }
 
 .mem-table {
@@ -605,7 +606,7 @@ h3.sub {
   margin-top: 0.75rem;
   padding: 0.4rem 1.1rem;
   background: $brand-color-deep;
-  color: $text-color;
+  color: $brand-fg;
   border: none;
   cursor: pointer;
   font-family: $base-font-family;
@@ -637,14 +638,16 @@ h3.sub {
 .simon-score  { font-size: 0.85rem; color: $grey-color; margin-bottom: 0.4rem; }
 
 /**
- * landing hero — screen blend so the black around the brain
- * dissolves into the dark page bg, brain glows on top.
+ * landing hero — invert + multiply so the black around the brain
+ * dissolves into the cream page bg, and the mri reads as a dark
+ * drawing on top.
  */
 .hero {
   text-align: center;
 }
 .hero-brain {
-  mix-blend-mode: screen;
+  filter: invert(1);
+  mix-blend-mode: multiply;
   max-width: 100%;
 }
 
