@@ -18,8 +18,8 @@ $unit-spacing:      15px !default;
 $nav-spacing:       18px !default;
 
 $text-color:        #f0e6c8 !default;
-$background-color:  #263528 !default;
-$background-alt:    #303f31 !default;
+$background-color:  #2f4132 !default;
+$background-alt:    #3b4f3c !default;
 $brand-color-dark:  #728c69 !default;
 $brand-color-light: #b8935a !default;
 $brand-color-deep:  #044f2f !default;
@@ -63,6 +63,25 @@ body {
           font-feature-settings: "kern" 1;
   font-kerning: normal;
   scroll-behavior: smooth;
+  position: relative;
+}
+
+/* film-grain overlay — subtle SVG turbulence over the whole page.
+   pointer-events: none so it never intercepts clicks;
+   position: fixed keeps grain stable as the page scrolls;
+   mix-blend-mode: overlay lets it interact with underlying colors. */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.94 0 0 0 0 0.9 0 0 0 0 0.78 0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 p {
