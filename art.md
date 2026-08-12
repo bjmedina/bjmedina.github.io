@@ -4,18 +4,10 @@ title: art
 permalink: /art/
 ---
 
-<div class="content-narrow content-block">
-  <nav class="section-jumps">
-    <a href="#music">music</a>
-    <a href="#radio">radio</a>
-    <a href="#writing">writing</a>
-  </nav>
-</div>
-
 <!-- MUSIC -->
 <section id="music" class="art-section">
   <div class="content-narrow content-block">
-    <h2 class="section-header typewrite" data-text="music">music</h2>
+    <h2 class="sec">music</h2>
     <p class="section-note">specific spots in longer videos where i'm featured.</p>
   </div>
 
@@ -38,16 +30,18 @@ permalink: /art/
       {%- endfor -%}
     </div>
 
-    <div class="gig-list">
-      {%- for gig in gigs -%}
-      <div class="gig" data-year="{{ gig.date | date: '%Y' }}">
-        <div class="gig-header">
-          <h4 class="gig-venue">{{ gig.venue }}{% if gig.date %} &mdash; {{ gig.date | date: "%B %Y" }}{% endif %}</h4>
-          {%- if gig.meta %}<p class="gig-meta">{{ gig.meta }}</p>{% endif -%}
-        </div>
-
+    {%- for gig in gigs -%}
+    <div class="row gig-row" data-year="{{ gig.date | date: '%Y' }}">
+      <div class="tag">
+        <span class="venue">{{ gig.venue }}</span>
+        {%- if gig.date %}<span class="year">{{ gig.date | date: "%b '%y" | downcase }}</span>{% endif -%}
+      </div>
+      <div class="body">
+        {%- if gig.meta %}<div class="gig-meta">{{ gig.meta }}</div>{% endif -%}
         {%- for clip in gig.clips -%}
-        <div class="performance">
+        <div class="clip-item">
+          <div class="title">{{ clip.title }}</div>
+          {%- if clip.note %}<div class="note">{{ clip.note }}</div>{% endif -%}
           <div class="performance-media">
             <iframe
               src="https://www.youtube.com/embed/{{ clip.video }}?start={{ clip.start | default: 0 }}{% if clip.end %}&amp;end={{ clip.end }}{% endif %}"
@@ -56,15 +50,11 @@ permalink: /art/
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
-          <p class="performance-caption">
-            <span class="performance-title">{{ clip.title }}</span>
-            {%- if clip.note %}<br><span class="performance-note">{{ clip.note }}</span>{% endif -%}
-          </p>
         </div>
         {%- endfor -%}
       </div>
-      {%- endfor -%}
     </div>
+    {%- endfor -%}
 
   </div>
   {%- endif -%}
@@ -73,12 +63,7 @@ permalink: /art/
 <!-- RADIO -->
 <section id="radio" class="art-section">
   <div class="content-narrow content-block">
-    <h2 class="section-header typewrite" data-text="radio">radio</h2>
-    <p class="section-note">
-      brain waves — my radioshow on <a href="https://wmbr.org/" target="_blank">wmbr</a>, mit's station.
-      playlists below, most recent first.
-    </p>
-
+    <h3 class="sub">radio · brain waves on wmbr</h3>
     <ul class="art-list">
       {%- for post in site.categories.music -%}
       <li>
@@ -93,9 +78,7 @@ permalink: /art/
 <!-- WRITING -->
 <section id="writing" class="art-section">
   <div class="content-narrow content-block">
-    <h2 class="section-header typewrite" data-text="writing">writing</h2>
-    <p class="section-note">notes, small essays, guest posts.</p>
-
+    <h3 class="sub">writing</h3>
     <ul class="art-list">
       {%- for post in site.categories.Personal -%}
       <li>

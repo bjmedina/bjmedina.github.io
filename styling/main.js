@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Skips per-item headers inside gig / pub / performance cards.
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var headerNodes = document.querySelectorAll(
-    'main.page-content h1, main.page-content h2, main.page-content h3, .typewrite'
+    'main.page-content h2, .typewrite'
   );
   var headers = Array.prototype.filter.call(headerNodes, function (el) {
     if (el.dataset.notype != null) return false;
