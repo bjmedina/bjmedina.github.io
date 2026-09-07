@@ -8,4 +8,6 @@ journal: Journal of Memory and Language
 volume: 146
 ref-1-name: PDF
 ref-1-link: https://www.sciencedirect.com/science/article/pii/S0010027725002744
+ref-2-name: Press (McGovern)
+ref-2-link: https://mcgovern.mit.edu/2025/10/01/mit-cognitive-scientists-reveal-why-some-sentences-stand-out-from-others/
 ---
