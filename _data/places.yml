@@ -71,6 +71,12 @@
   lat: 42.3957066
   lon: -71.1219679
 
+- name: Triangle Coffee Bar
+  type: cafe
+  city: Somerville
+  lat: 42.3764242
+  lon: -71.0846547
+
 - name: Michette
   type: bakery
   city: Somerville
