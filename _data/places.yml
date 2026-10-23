@@ -22,3 +22,21 @@
   city: Somerville
   lat: 42.3799833
   lon: -71.0962027
+
+- name: Remnant Brewing
+  type: brewery
+  city: Somerville
+  lat: 42.3811094
+  lon: -71.098008
+
+- name: Buenas
+  type: restaurant
+  city: Somerville
+  lat: 42.381216
+  lon: -71.0982644
+
+- name: Bakery Oma
+  type: bakery
+  city: Somerville
+  lat: 42.3811671
+  lon: -71.0982707
