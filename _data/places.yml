@@ -46,3 +46,9 @@
   city: Somerville
   lat: 42.3767026
   lon: -71.0956688
+
+- name: Michette
+  type: bakery
+  city: Cambridge
+  lat: 42.3735743
+  lon: -71.0943011
