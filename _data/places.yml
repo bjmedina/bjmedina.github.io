@@ -41,6 +41,12 @@
   lat: 42.3731166
   lon: -71.1003229
 
+- name: Tilde
+  type: cafe
+  city: Somerville
+  lat: 42.3966757
+  lon: -71.1297686
+
 - name: Michette
   type: bakery
   city: Cambridge
@@ -64,3 +70,9 @@
   city: Cambridge
   lat: 42.370484
   lon: -71.1044197
+
+- name: Verveine Cafe & Bakery
+  type: cafe
+  city: Cambridge
+  lat: 42.3622616
+  lon: -71.0987372
