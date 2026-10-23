@@ -50,8 +50,8 @@
 - name: Michette
   type: bakery
   city: Cambridge
-  lat: 42.3735743
-  lon: -71.0943011
+  lat: 42.3884324
+  lon: -71.0858451
 
 - name: 1369 Coffee House
   type: cafe
@@ -138,3 +138,9 @@
   city: Cambridge
   lat: 42.371249
   lon: -71.1146863
+
+- name: La Cosecha
+  type: bakery
+  city: Cambridge
+  lat: 42.3874392
+  lon: -71.0822627
