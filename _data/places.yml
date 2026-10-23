@@ -59,6 +59,12 @@
   lat: 42.3749841
   lon: -71.1094423
 
+- name: Yafa Bakery & Café
+  type: bakery
+  city: Somerville
+  lat: 42.3837014
+  lon: -71.1092476
+
 - name: Michette
   type: bakery
   city: Cambridge
