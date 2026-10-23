@@ -40,3 +40,9 @@
   city: Somerville
   lat: 42.3811671
   lon: -71.0982707
+
+- name: Komugi Bakery & Cafe
+  type: bakery
+  city: Somerville
+  lat: 42.3767026
+  lon: -71.0956688
