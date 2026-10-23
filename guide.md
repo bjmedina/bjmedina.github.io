@@ -30,7 +30,11 @@ guide: true
       {%- if p.city == city -%}
       <li data-lat="{{ p.lat }}" data-lon="{{ p.lon }}" data-name="{{ p.name | escape }}">
         <div class="place-head">
-          <a class="place-name" href="https://www.google.com/maps/search/?api=1&query={{ p.lat }},{{ p.lon }}" target="_blank" rel="noopener">{{ p.name }}</a>
+          {%- if p.url -%}
+            <a class="place-name" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>
+          {%- else -%}
+            <a class="place-name" href="https://www.google.com/maps/search/?api=1&query={{ p.name | url_encode }}%20{{ p.lat }}%2C{{ p.lon }}" target="_blank" rel="noopener">{{ p.name }}</a>
+          {%- endif -%}
           {%- if p.type %}<span class="place-type">{{ p.type | downcase }}</span>{% endif -%}
         </div>
         {%- if p.neighborhood or p.rating -%}

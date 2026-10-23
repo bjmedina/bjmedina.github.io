@@ -6,6 +6,9 @@
 #   city          - city, used to group entries on the page
 #   neighborhood  - optional, e.g. "Harvard Square"
 #   lat / lon     - coordinates (from a google maps link)
+#   url           - optional google maps url for the place; if set, the
+#                   name link uses it verbatim (otherwise we construct a
+#                   google maps search for "name lat,lon")
 #   rating        - optional 1-5
 #   note          - optional short line, shown under the entry
 #
