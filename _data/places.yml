@@ -94,3 +94,9 @@
   city: Cambridge
   lat: 42.3663479
   lon: -71.0941159
+
+- name: Honey's Cambridge
+  type: cafe
+  city: Cambridge
+  lat: 42.3716442
+  lon: -71.0835581
