@@ -82,3 +82,9 @@
   city: Cambridge
   lat: 42.3860286
   lon: -71.1195879
+
+- name: Cicada
+  type: cafe
+  city: Cambridge
+  lat: 42.3676927
+  lon: -71.1020615
