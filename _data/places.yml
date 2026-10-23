@@ -52,3 +52,27 @@
   city: Cambridge
   lat: 42.3735743
   lon: -71.0943011
+
+- name: Zuzu's Petals
+  type: cafe
+  city: Somerville
+  lat: 42.3731166
+  lon: -71.1003229
+
+- name: Trina's Starlite Lounge
+  type: bar
+  city: Somerville
+  lat: 42.3745196
+  lon: -71.1015737
+
+- name: 1369 Coffee House
+  type: cafe
+  city: Cambridge
+  lat: 42.3737842
+  lon: -71.1003713
+
+- name: Mariposa Bakery
+  type: bakery
+  city: Cambridge
+  lat: 42.3633039
+  lon: -71.1007291
