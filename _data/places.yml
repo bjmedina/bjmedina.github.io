@@ -174,3 +174,9 @@
   city: Cambridge
   lat: 42.3896601
   lon: -71.1187957
+
+- name: Black Sheep Market
+  type: cafe
+  city: Cambridge
+  lat: 42.3602168
+  lon: -71.11006
