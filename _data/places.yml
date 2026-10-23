@@ -100,3 +100,9 @@
   city: Cambridge
   lat: 42.3716442
   lon: -71.0835581
+
+- name: Elmendorf Baking Supplies & Cafe
+  type: bakery
+  city: Cambridge
+  lat: 42.3717314
+  lon: -71.0862776
