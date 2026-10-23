@@ -76,3 +76,9 @@
   city: Cambridge
   lat: 42.3633039
   lon: -71.1007291
+
+- name: Barismo
+  type: cafe
+  city: Cambridge
+  lat: 42.370484
+  lon: -71.1044197
