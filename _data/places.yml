@@ -65,6 +65,12 @@
   lat: 42.3837014
   lon: -71.1092476
 
+- name: Diesel Cafe
+  type: cafe
+  city: Somerville
+  lat: 42.3957066
+  lon: -71.1219679
+
 - name: Michette
   type: bakery
   city: Somerville
