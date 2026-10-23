@@ -10,29 +10,15 @@
 #   note          - optional short line, shown under the entry
 #
 # entries render in the order they appear here, grouped by city.
-# the three placeholders below are just so the map isn't empty on first load.
-# delete them when you drop in real spots.
 
-- name: Tatte Bakery (Harvard Square)
-  type: bakery
-  city: Cambridge
-  neighborhood: Harvard Square
-  lat: 42.3736
-  lon: -71.1189
-  note: placeholder — delete me
-
-- name: 1369 Coffee House (Inman)
-  type: cafe
-  city: Cambridge
-  neighborhood: Inman Square
-  lat: 42.3745
-  lon: -71.1012
-  note: placeholder — delete me
-
-- name: Diesel Café
+- name: Bloc Cafe
   type: cafe
   city: Somerville
-  neighborhood: Davis Square
-  lat: 42.3977
-  lon: -71.1221
-  note: placeholder — delete me
+  lat: 42.3808083
+  lon: -71.0968528
+
+- name: Maprang Bakery & Cafe
+  type: bakery
+  city: Somerville
+  lat: 42.3799833
+  lon: -71.0962027
