@@ -106,3 +106,15 @@
   city: Cambridge
   lat: 42.3717314
   lon: -71.0862776
+
+- name: PRB Boulangerie
+  type: bakery
+  city: Cambridge
+  lat: 42.3644374
+  lon: -71.0833898
+
+- name: Ripple Cafe
+  type: cafe
+  city: Cambridge
+  lat: 42.362279
+  lon: -71.086354
