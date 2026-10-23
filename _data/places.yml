@@ -168,3 +168,9 @@
   city: Cambridge
   lat: 42.3749055
   lon: -71.1503177
+
+- name: Cafe Zing
+  type: cafe
+  city: Cambridge
+  lat: 42.3896601
+  lon: -71.1187957
