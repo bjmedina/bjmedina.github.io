@@ -8,7 +8,7 @@ guide: true
 <div class="content-narrow content-block">
   <h2 class="sec">guide</h2>
   <p class="section-note">
-    cafes and restaurants i've liked (or at least ... visited). mostly places i've worked out of or eaten at.
+    cafes and bakeries i've liked (or at least ... visited). mostly places i've worked out of or grabbed a pastry at.
   </p>
 
   <div id="guide-map"></div>

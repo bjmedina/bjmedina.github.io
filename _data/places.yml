@@ -1,8 +1,8 @@
-# cafes & restaurants i've liked. add entries freely.
+# cafes & bakeries i've been to. add entries freely.
 #
 # fields per entry:
 #   name          - the place
-#   type          - cafe | restaurant | bar | bakery | anything else
+#   type          - cafe | bakery
 #   city          - city, used to group entries on the page
 #   neighborhood  - optional, e.g. "Harvard Square"
 #   lat / lon     - coordinates (from a google maps link)
@@ -23,18 +23,6 @@
   lat: 42.3799833
   lon: -71.0962027
 
-- name: Remnant Brewing
-  type: brewery
-  city: Somerville
-  lat: 42.3811094
-  lon: -71.098008
-
-- name: Buenas
-  type: restaurant
-  city: Somerville
-  lat: 42.381216
-  lon: -71.0982644
-
 - name: Bakery Oma
   type: bakery
   city: Somerville
@@ -47,23 +35,17 @@
   lat: 42.3767026
   lon: -71.0956688
 
-- name: Michette
-  type: bakery
-  city: Cambridge
-  lat: 42.3735743
-  lon: -71.0943011
-
 - name: Zuzu's Petals
   type: cafe
   city: Somerville
   lat: 42.3731166
   lon: -71.1003229
 
-- name: Trina's Starlite Lounge
-  type: bar
-  city: Somerville
-  lat: 42.3745196
-  lon: -71.1015737
+- name: Michette
+  type: bakery
+  city: Cambridge
+  lat: 42.3735743
+  lon: -71.0943011
 
 - name: 1369 Coffee House
   type: cafe
