@@ -77,6 +77,12 @@
   lat: 42.3764242
   lon: -71.0846547
 
+- name: Vinal Bakery
+  type: bakery
+  city: Somerville
+  lat: 42.3780394
+  lon: -71.0916313
+
 - name: Michette
   type: bakery
   city: Somerville
