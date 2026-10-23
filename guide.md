@@ -8,7 +8,7 @@ guide: true
 <div class="content-narrow content-block">
   <h2 class="sec">guide</h2>
   <p class="section-note">
-    cafes and bakeries i've liked (or at least ... visited). mostly places i've worked out of or grabbed a pastry at.
+    going to coffee shops was a huge help during my phd. it's also a vehicle for getting to know the city — it encourages me to go out and explore. these are my favorite spots to grab a coffee and/or pastry (not necessarily to work out of — working coffee shops are a little different).
   </p>
 
   <div id="guide-map"></div>
