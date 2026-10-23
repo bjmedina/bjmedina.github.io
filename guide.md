@@ -13,7 +13,7 @@ guide: true
 
   <div id="guide-map"></div>
 
-  {%- assign places = site.data.places | sort: "visited" | reverse -%}
+  {%- assign places = site.data.places -%}
 
   {%- assign cities = "" -%}
   {%- for p in places -%}
@@ -32,7 +32,6 @@ guide: true
         <div class="place-head">
           <span class="place-name">{{ p.name }}</span>
           {%- if p.type %}<span class="place-type">{{ p.type | downcase }}</span>{% endif -%}
-          {%- if p.visited %}<span class="place-date">{{ p.visited | date: "%b %Y" | downcase }}</span>{% endif -%}
         </div>
         {%- if p.neighborhood or p.rating -%}
         <div class="place-sub">
