@@ -8,7 +8,8 @@ permalink: /art/
 <section id="music" class="art-section">
   <div class="content-narrow content-block">
     <h2 class="sec">music</h2>
-    <p class="section-note">specific spots in longer videos where i'm featured.</p>
+    <p class="art-blurb">music is a huge vehicle for self expression and connection (both to myself and with others). i didn't do it for a long time, and i'm happy to be back at it, with such a vibrant community.</p>
+    <p class="section-note">specific spots in longer videos where i'm featured, below.</p>
   </div>
 
   {%- if site.data.sax_clips and site.data.sax_clips.size > 0 -%}

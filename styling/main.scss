@@ -353,6 +353,13 @@ h3.sub {
   margin: 0.4rem 0 1rem;
 }
 
+.art-blurb {
+  font-size: 0.95rem;
+  color: $text-color;
+  line-height: 1.6;
+  margin: 0.75rem 0 0.5rem;
+}
+
 /**
  * tabular row layout — left tag / right body
  * used for publications, presentations, gigs
