@@ -76,3 +76,9 @@
   city: Cambridge
   lat: 42.3622616
   lon: -71.0987372
+
+- name: Bagelsaurus
+  type: bakery
+  city: Cambridge
+  lat: 42.3860286
+  lon: -71.1195879
