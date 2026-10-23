@@ -88,3 +88,9 @@
   city: Cambridge
   lat: 42.3676927
   lon: -71.1020615
+
+- name: Vida Coffee
+  type: cafe
+  city: Cambridge
+  lat: 42.3663479
+  lon: -71.0941159
