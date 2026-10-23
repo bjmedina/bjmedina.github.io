@@ -47,6 +47,12 @@
   lat: 42.3966757
   lon: -71.1297686
 
+- name: 3 Little Figs
+  type: cafe
+  city: Somerville
+  lat: 42.391795
+  lon: -71.1119001
+
 - name: Michette
   type: bakery
   city: Cambridge
