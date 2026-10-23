@@ -118,3 +118,10 @@
   city: Cambridge
   lat: 42.362279
   lon: -71.086354
+
+- name: Trident Booksellers & Cafe
+  type: cafe
+  city: Boston
+  neighborhood: Back Bay
+  lat: 42.348244
+  lon: -71.086623
