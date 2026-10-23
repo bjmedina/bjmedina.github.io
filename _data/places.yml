@@ -162,3 +162,9 @@
   city: Cambridge
   lat: 42.3859153
   lon: -71.1380268
+
+- name: Sofra Bakery & Cafe
+  type: bakery
+  city: Cambridge
+  lat: 42.3749055
+  lon: -71.1503177
