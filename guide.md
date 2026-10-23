@@ -30,7 +30,7 @@ guide: true
       {%- if p.city == city -%}
       <li data-lat="{{ p.lat }}" data-lon="{{ p.lon }}" data-name="{{ p.name | escape }}">
         <div class="place-head">
-          <span class="place-name">{{ p.name }}</span>
+          <a class="place-name" href="https://www.google.com/maps/search/?api=1&query={{ p.lat }},{{ p.lon }}" target="_blank" rel="noopener">{{ p.name }}</a>
           {%- if p.type %}<span class="place-type">{{ p.type | downcase }}</span>{% endif -%}
         </div>
         {%- if p.neighborhood or p.rating -%}
@@ -70,7 +70,8 @@ guide: true
       if (isNaN(lat) || isNaN(lon)) return;
       var m = L.marker([lat, lon]).addTo(map).bindPopup(li.dataset.name);
       markers.push(m);
-      li.addEventListener('click', function () {
+      li.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;  // let the external link handle it
         map.setView([lat, lon], Math.max(map.getZoom(), 14));
         m.openPopup();
       });
