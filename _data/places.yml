@@ -55,7 +55,7 @@
 
 - name: Asaro Bakery and Cafe
   type: bakery
-  city: Somerville
+  city: Cambridge
   lat: 42.3749841
   lon: -71.1094423
 
@@ -67,7 +67,7 @@
 
 - name: Michette
   type: bakery
-  city: Cambridge
+  city: Somerville
   lat: 42.3884324
   lon: -71.0858451
 
@@ -159,7 +159,7 @@
 
 - name: La Cosecha
   type: bakery
-  city: Cambridge
+  city: Somerville
   lat: 42.3874392
   lon: -71.0822627
 
