@@ -53,6 +53,12 @@
   lat: 42.391795
   lon: -71.1119001
 
+- name: Asaro Bakery and Cafe
+  type: bakery
+  city: Somerville
+  lat: 42.3749841
+  lon: -71.1094423
+
 - name: Michette
   type: bakery
   city: Cambridge
