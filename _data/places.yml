@@ -125,3 +125,10 @@
   neighborhood: Back Bay
   lat: 42.348244
   lon: -71.086623
+
+- name: George Howell Coffee
+  type: cafe
+  city: Boston
+  neighborhood: Back Bay
+  lat: 42.3475929
+  lon: -71.0883807
