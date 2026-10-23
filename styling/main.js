@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Year filter on the music page
   var musicFilters = document.getElementById('music-filters');
   if (musicFilters) {
-    var gigEls = document.querySelectorAll('.gig[data-year]');
+    var gigEls = document.querySelectorAll('.gig-row[data-year], .gig[data-year]');
     musicFilters.addEventListener('click', function (e) {
       var btn = e.target.closest('.music-filter');
       if (!btn) return;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   var headers = Array.prototype.filter.call(headerNodes, function (el) {
     if (el.dataset.notype != null) return false;
-    return !el.closest('.gig, .pub-entry, .performance-caption');
+    return !el.closest('.gig, .gig-row, .pub-entry, .row, .performance-caption');
   });
   headers.forEach(function (el, i) {
     el.classList.add('typewrite');
