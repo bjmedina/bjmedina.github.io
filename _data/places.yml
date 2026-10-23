@@ -156,3 +156,9 @@
   city: Cambridge
   lat: 42.3874392
   lon: -71.0822627
+
+- name: La Saison Bakery
+  type: bakery
+  city: Cambridge
+  lat: 42.3859153
+  lon: -71.1380268
