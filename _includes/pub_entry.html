@@ -2,9 +2,11 @@
 
 <div class="row">
   <div class="tag">
-    {%- if pub.journal -%}
+    {%- if pub.venue -%}
+      <span class="venue">{{ pub.venue }}</span>
+    {%- elsif pub.journal -%}
       <span class="venue">{{ pub.journal }}</span>
-    {%- else -%}
+    {%- elsif pub.paper -%}
       <span class="venue">Manuscript</span>
     {%- endif -%}
     <span class="year">{% if pub.in-prep %}in prep{% else %}'{{ pub.date | date: "%y" }}{% endif %}</span>
