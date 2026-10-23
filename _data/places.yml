@@ -1,0 +1,42 @@
+# cafes & restaurants i've liked. add entries freely.
+#
+# fields per entry:
+#   name          - the place
+#   type          - cafe | restaurant | bar | bakery | anything else
+#   city          - city, used to group entries on the page
+#   neighborhood  - optional, e.g. "Harvard Square"
+#   lat / lon     - coordinates. get them from google maps:
+#                   right-click a spot → "what's here?" → copy the two numbers
+#   visited       - YYYY-MM-DD you went (used to sort within a city)
+#   rating        - optional 1-5
+#   note          - optional short line, shown under the entry
+#
+# the three placeholders below are just so the map isn't empty on first load.
+# delete them when you drop in real spots.
+
+- name: Tatte Bakery (Harvard Square)
+  type: bakery
+  city: Cambridge
+  neighborhood: Harvard Square
+  lat: 42.3736
+  lon: -71.1189
+  visited: 2026-10-01
+  note: placeholder — delete me
+
+- name: 1369 Coffee House (Inman)
+  type: cafe
+  city: Cambridge
+  neighborhood: Inman Square
+  lat: 42.3745
+  lon: -71.1012
+  visited: 2026-09-15
+  note: placeholder — delete me
+
+- name: Diesel Café
+  type: cafe
+  city: Somerville
+  neighborhood: Davis Square
+  lat: 42.3977
+  lon: -71.1221
+  visited: 2026-09-01
+  note: placeholder — delete me
