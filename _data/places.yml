@@ -132,3 +132,9 @@
   neighborhood: Back Bay
   lat: 42.3475929
   lon: -71.0883807
+
+- name: Faro Café
+  type: cafe
+  city: Cambridge
+  lat: 42.371249
+  lon: -71.1146863
